@@ -18,6 +18,7 @@
         h1 {
             color: rgb(0, 0, 255);
             font-size: 40px;
+            font-style: italic;
         }
 
         .textOne {
@@ -31,11 +32,48 @@
 
         h2 {
             color: rgb(0, 0, 255);
+            font-style: italic;
         }
 
         a {
             color: rgb(117, 117, 223);
             text-decoration: none;
+        }
+
+        /*Создайте 5-6 параграфом, которым задайте фон, разными способами. Одному из параграфов задайте в качестве фона изображение,
+         поэкспериментируйте с заданием фона используя шестнадцатеричный код цвета, имя цвета и функцию rgba.*/
+
+        .backImg {
+            background-image: url(https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg);
+            width: 800px;
+            height: 600px;
+            color: white;
+        }
+
+        .backColor {
+            background-color: rgb(20, 230, 160);
+            width: 400px;
+            height: 300px;
+        }
+
+        .backClip {
+            background-color: rgb(230, 62, 20);
+            width: 400px;
+            height: 300px;
+            border: 20px dotted black;
+            background-clip: padding-box;
+        }
+
+        .backHsl {
+            background-color: hsl(91, 58%, 42%);
+            width: 400px;
+            height: 300px;
+        }
+
+        .backName {
+            background-color: yellow;
+            width: 400px;
+            height: 300px;
         }
     </style>
 </head>
@@ -143,7 +181,16 @@
         <p style="border: 5px outset;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque a repellat nemo
             facere aliquam ad labore. Maxime autem iste numquam doloremque accusamus? Earum amet vero nulla ducimus
             dignissimos blanditiis quod?</p>
+    </div>
+    <!--Создайте 5-6 параграфом, которым задайте фон, разными способами. Одному из параграфов задайте в качестве фона изображение,
+         поэкспериментируйте с заданием фона используя шестнадцатеричный код цвета, имя цвета и функцию rgba.-->
 
+    <div>
+        <p class="backImg">Lorem ipsum dolor sit amet.</p>
+        <p class="backColor">Lorem ipsum dolor sit amet.</p>
+        <p class="backClip">Lorem ipsum dolor sit amet.</p>
+        <p class="backHsl">Lorem ipsum dolor sit amet.</p>
+        <p class="backName">Lorem ipsum dolor sit amet.</p>
     </div>
 </body>
 
