@@ -48,3 +48,48 @@
     background: blue;
     clear: left;
 }
+
+/* Реализуйте разметку, подобную изображению stickers в папке с домашними заданиями и проверьте ее на валидность. */
+
+th {
+    width: 150px;
+    height: 50px;
+    border: 2px solid black;
+    color: white;
+    font-size: 25px;
+
+}
+
+td {
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+tr th:nth-child(1) {
+    background: rgb(210, 105, 30);
+}
+
+tr th:nth-child(2) {
+    background: hsl(82, 39%, 30%);
+}
+
+tr th:nth-child(3) {
+    background: rgb(79, 126, 196);
+}
+
+tr td:nth-child(1) {
+    background: rgb(190, 137, 99);
+}
+
+tr td:nth-child(2) {
+    background: rgb(114, 156, 94);
+}
+
+tr td:nth-child(3) {
+    background: rgb(125, 156, 212);
+}
