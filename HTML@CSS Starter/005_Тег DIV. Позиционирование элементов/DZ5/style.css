@@ -1,4 +1,7 @@
 /* Создайте на странице 10 параграфов зеленого цвета, размером 100рх х 100рх. Задайте им зелёный цвет и расположите горизонтально друг за другом. */
+* {
+    margin: 0;
+}
 
 .container p:nth-last-of-type(1n) {
     background: green;
@@ -8,3 +11,40 @@
     margin: 10px;
 }
 
+/* Сверстайте структуру HTML страницы по шаблону block в папке с домашним заданием. */
+
+#t-float {
+    clear: left;
+    color: white;
+    font-size: 30px;
+}
+
+.t-head {
+    height: 100px;
+    background: lightskyblue;
+}
+
+.t-nav {
+    height: 50px;
+    background: lightcoral;
+}
+
+.t-body__1 {
+    width: 25%;
+    height: 300px;
+    background: lightgreen;
+    float: left;
+}
+
+.t-body__2 {
+    width: 75%;
+    height: 300px;
+    background: lightgray;
+    float: left;
+}
+
+.t-foot {
+    height: 100px;
+    background: blue;
+    clear: left;
+}
