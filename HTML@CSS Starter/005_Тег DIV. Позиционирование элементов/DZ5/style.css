@@ -13,37 +13,37 @@
 
 /* Сверстайте структуру HTML страницы по шаблону block в папке с домашним заданием. */
 
-#t-float {
+#float {
     clear: left;
     color: white;
     font-size: 30px;
 }
 
-.t-head {
+.head {
     height: 100px;
     background: lightskyblue;
 }
 
-.t-nav {
+.nav {
     height: 50px;
     background: lightcoral;
 }
 
-.t-body__1 {
+.body__1 {
     width: 25%;
     height: 300px;
     background: lightgreen;
     float: left;
 }
 
-.t-body__2 {
+.body__2 {
     width: 75%;
     height: 300px;
     background: lightgray;
     float: left;
 }
 
-.t-foot {
+.foot {
     height: 100px;
     background: blue;
     clear: left;
