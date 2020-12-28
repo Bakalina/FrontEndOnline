@@ -13,23 +13,51 @@
     height: 50px;
     background: #fb9693;
 }
+
 .content {
-    height: 400px;
+    height: 1100px;
 }
 
 .content__menu {
     width: 20%;
-    height: 400px;
+    height: 1100px;
     background: #9cca9c;
     position: absolute;
 }
+
 .content__text {
     width: 80%;
-    height: 400px;
+    height: 1100px;
     background: #cccfd0;
     position: absolute;
     left: 20%;
 }
+
+.content__video-1 {
+    width: 100%;
+    height: auto;
+    max-width: 750px;
+    position: absolute;
+    left: 26px;
+    top: 36px;
+}
+
+.content__video-2 {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    max-height: 420px;
+    position: absolute;
+    left: 26px;
+    top: 480px;
+}
+
+.content__text audio {
+    position: absolute;
+    left: 26px;
+    top: 1000px;
+}
+
 .footer {
     height: 80px;
     background: #0466fc;

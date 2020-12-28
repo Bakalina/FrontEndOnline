@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- Возьмите пример страницы с предыдущего урока и сверстайте ее с использованием тегов семантической разметки. -->
     <header class="header">
         <p>Шапка</p>
     </header>
@@ -21,6 +22,22 @@
         </nav>
         <section class="content__text">
             <h1>Контент</h1>
+            <!-- Создайте страницу, на которую добавьте видео, и задайте ему размеры. Предусмотрите возможность использования
+            нескольких источников для видео, если браузер не поддерживает тот или иной формат. -->
+            <video class="content__video-1" controls poster="img/poster.PNG">
+                <source src="video/vsvideo.mp4" />
+                <source src="video/vsvideo.ogg" />
+                <source src="video/vsvideo.webm" />
+            </video>
+            <iframe class="content__video-2" src="https://www.youtube.com/embed/5qap5aO4i9A" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <!-- Создайте страницу, на которую добавьте аудио дорожку. Предусмотрите возможность использования нескольких
+            источников для аудио, если браузер не поддерживает тот или иной формат. -->
+            <audio controls loop>
+                <source src="audio/Vivaldi.mp3" />
+                <source src="audio/Vivaldi.ogg" />
+            </audio>
         </section>
     </main>
     <footer class="footer">
