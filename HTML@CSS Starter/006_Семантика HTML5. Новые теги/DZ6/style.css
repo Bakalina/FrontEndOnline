@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header {
+    height: 100px;
+    background: #64cacb;
+}
+
+.navigation {
+    height: 50px;
+    background: #fb9693;
+}
+.content {
+    height: 400px;
+}
+
+.content__menu {
+    width: 20%;
+    height: 400px;
+    background: #9cca9c;
+    position: absolute;
+}
+.content__text {
+    width: 80%;
+    height: 400px;
+    background: #cccfd0;
+    position: absolute;
+    left: 20%;
+}
+.footer {
+    height: 80px;
+    background: #0466fc;
+}
