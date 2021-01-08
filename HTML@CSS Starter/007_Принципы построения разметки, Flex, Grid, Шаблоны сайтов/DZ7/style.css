@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headTitle {
+    display: flex;
+}
+
+.headTitle h1 {
+    color: #92d144;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.headTitle p {
+    color: #cccccc;
+    font-size: 50px;
+    padding: 5px;
+}
+
+.headNav {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 60%;
+}
+
+.headNav a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    background: #94d249;
+    margin: 5px;
+}
+
+.artcOne {
+    display: flex;
+    justify-content: center;
+}
+
+.artcOneImg {
+    flex-grow: 1;
+}
+
+.artcOneImg img {
+    margin: 5px;
+    height: 500px;
+}
+
+.artcOneText {
+    margin: 5px;
+}
+
+.artcOneText h2 {
+    color: #969696;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.artcOneText p {
+    color: #7f7f7f;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.artcTwo h2 {
+    color: #969696;
+    font-size: 50px;
+    margin: 20px;
+
+}
+
+.artcTwoContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artcTwoContent div {
+    width: 450px;
+}
+
+.artcTwoContent img {
+    width: 450px;
+}
+
+.artcTwoContent h3 {
+    color: #7f7f7f;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.artcTwoContent time {
+    color: #cccccc;
+    font-size: 15px;
+}
+
+.artcTwoContent p {
+    color: #969696;
+    font-size: 20px;
+    margin-top: 20px;
+}
