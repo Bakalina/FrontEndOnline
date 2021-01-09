@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .container {
+            width: 100%;
+        }
+        
+        form {
+            width: 800px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input,
+        button,
+        select {
+            border-radius: 5px;
+            border: 1px solid gray;
+            height: 25px;
+            padding: 3px;
+            margin: 5px;
+        }
+        
+        select {
+            min-height: 33px;
+        }
+        
+        .form-group1 {
+            float: left;
+        }
+        
+        button {
+            background-color: rgb(3, 176, 245);
+            width: 100px;
+            height: 30px;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        button:hover {
+            background-color: blue;
+        }
+        
+        label {
+            margin: 7px;
+        }
+        
+        [placeholder] {
+            font-style: italic;
+        }
+        
+        .form-row {
+            clear: both;
+        }
+        
+        #email,
+        #password,
+        #city {
+            width: 380px;
+        }
+        
+        #address1,
+        #address2 {
+            width: 780px;
+        }
+        
+        #state,
+        #zip {
+            width: 185px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="form-group1">
+                    <label for="email">Email</label> <br>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group1">
+                    <label for="password">Password</label> <br>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+            </div>
+            <div>
+                <label for="address1">Address</label> <br>
+                <input type="text" id="address1" placeholder="18—24 Swinton Street">
+            </div>
+            <div>
+                <label for="address2">Address 2</label> <br>
+                <input type="text" id="address2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+                <div class="form-group1">
+                    <label for="city">City</label> <br>
+                    <input type="text" id="city">
+                </div>
+                <div class="form-group1">
+                    <label for="state">State</label> <br>
+                    <select id="state">
+                        <option selected disabled>Choose...</option>
+                        <option>Киев</option>
+                        <option>Харьков</option>
+                        <option>Одесса</option>
+                        <option>Винница</option>
+                        <option>Запорожье</option>
+                        <option>Львов</option>
+                        <option>Тернополь</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group1">
+                    <label for="zip">Zip</label><br>
+                    <input type="text" id="zip">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit">Sign in</button>
+            </div>
+        </form>
+        </form>
+    </div>
+</body>
+
+</html>

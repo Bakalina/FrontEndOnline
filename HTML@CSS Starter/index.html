@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 13px;
+            margin: 0;
+        }
+        .container {
+            width: 350px;
+            margin: auto;
+            padding-top: 22px;
+        }
+
+        fieldset {
+            border: 0;
+            border-top: 1px solid rgb(204, 204, 204);
+            margin: 0;
+            padding-left: 0px;
+            padding-bottom: 42px;
+        }
+
+        legend {
+            color: rgb(0, 47, 108);
+            font-weight: bold;
+            padding: 0 20px;
+            margin-left: 25px;
+            margin-bottom: 12px;
+        }
+
+        label {
+            color: rgb(43,43,43);
+            margin-right: 29px;
+            margin-left: 20px;
+            width: 110px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        input,
+        select {
+            width: 154px;
+            height: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgb(85,85,85);
+            border-bottom-color: rgb(204, 204, 204);
+            border-right-color: rgb(204, 204, 204);
+        }
+
+        .form-row {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>Personal information</legend>
+                <div class="form-row">
+                    <label for="firstname"><b>* First name:</b></label>
+                    <input type="text" required id="firstname">
+                </div>
+
+                <div class="form-row">
+                    <label for="middlename">Middle name:</label>
+                    <input type="text" required id="middlename">
+                </div>
+
+                <div class="form-row">
+                    <label for="lastname"><b>* Last name:</b></label>
+                    <input type="text" required id="lastname">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Address</legend>
+                <div class="form-row">
+                    <label for="address">Address:</label>
+                    <input type="text" required id="address">
+                </div>
+
+                <div class="form-row">
+                    <label for="city">City or Town:</label>
+                    <input type="text" required id="city">
+                </div>
+
+                <div class="form-row">
+                    <label for="state">State:</label>
+                    <select id="state">
+                        <option value="1">First</option>
+                        <option value="1">Second</option>
+                        <option value="1">Third</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
