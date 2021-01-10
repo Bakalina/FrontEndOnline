@@ -59,11 +59,29 @@ body {
     border-radius: 25px;
     width: 80px;
     padding: 7px;
-    background:linear-gradient(to bottom, #edf4f8, #d4e7ef );
+    background: linear-gradient(to bottom, #edf4f8, #d4e7ef);
     border: 1px solid #cfcfcf;
     font-size: 16px;
     font-weight: bold;
     color: #777882;
-    
 }
 
+.formReset p {
+    position: absolute;
+    left: 50px;
+    bottom: -40px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.formReset a {
+    position: absolute;
+    bottom: -40px;
+    left: 220px;
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
