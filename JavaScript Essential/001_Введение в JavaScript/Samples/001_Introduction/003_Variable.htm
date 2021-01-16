@@ -1,0 +1,47 @@
+﻿<!-- 
+    
+    Создание переменных 
+    
+-->
+
+<html>
+
+<head>
+    <title>Переменная</title>
+    <script type="text/javascript">
+
+        // Создаем переменную с именем - 'а' и присваиваем ей значение - 10.
+        var a = 10;
+        var b;
+        var d;
+        //String s = "hello"; // недопустимо явно указывать тип переменной.
+        b = "Some string";
+
+        // Возможно создание переменной без использования ключевого слова - var
+        e = 22;
+        alert(e);
+
+        var a = b;
+        alert(a);
+
+        let message1 = "Hello!";
+        alert(message1);
+        //let message1 = 5;  //Переопределять значение переменной с ключевым словом let запрещено - будет ошибка
+        message1 = 5;
+        alert(message1);
+
+        //Тоже что и let но созданное значение нельзя изменить
+        const message2 = "Hi!"
+        alert(message2);
+
+        // Значение переменоой созданной с помощью const менять запрещено. Будет ошибка
+        message2 = 8;
+        alert(message2);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
