@@ -8,6 +8,7 @@
 
 
     <script>
+        
         // Создайте 3 переменные x = 6, y = 15, и z = 4:
         // Выполните и отобразите результат следующих операций для этих переменных:
         // x += y - x++ * z;
@@ -22,19 +23,25 @@
 
         x += y - x++ * z;
         document.write(x + "<br/>");
+        
         z = --x - y * 5;
         document.write(z + "<br/>");
+        
         y /= x + 5 % z;
         document.write(y + "<br/>");
+        
         z = x++ + y * 5;
         document.write(z + "<br/>");
+        
         x = y - x++ * z;
         document.write(x + "<br/><hr/>");
+        
         // Вычислите среднее арифметическое трех целочисленных значений и выведите его на экран.
 
         let q = 5;
         let w = 5;
         let e = 5;
+        
         result = (q + w + e) / 3;
         document.write(result + "<br/><hr/>");
 
@@ -50,7 +57,10 @@
         let s;
 
         v = pi * (r * r) * h;
-        document.write("Объем V цилиндра радиусом – 10 и высотой – 10 = " + v + "<br/><hr/>");
+        document.write("Объем V цилиндра радиусом – 10 и высотой – 10 = " + v + "<br/>");
+
+        s = 2 * pi * r * (r + h);
+        document.write("Площадь S поверхности цилиндра радиусом – 10 и высотой – 10 = " + s + "<br/><hr/>");
     </script>
 </head>
 
