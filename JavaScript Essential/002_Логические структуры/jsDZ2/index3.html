@@ -2,14 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Используя циклы нарисуйте в браузере с помощью пробелов (&nbsp) и звездочек (*):
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Используя циклы нарисуйте в браузере с помощью пробелов (&nbsp) и звездочек (*):
       Прямоугольник.
       Прямоугольный треугольник.
       Равносторонний треугольник.
       Ромб. -->
+  <script>
+    // Прямоугольник
+
+    for (let a = 0; a < 15; a++) {
+      for (let b = 0; b < 10; b++) {
+        document.write("&nbsp *");
+      }
+      document.write("&nbsp *" + "<br/>");
+    }
+
+    document.write("<br/><hr/>");
+
+    // Прямоугольный треугольник
+
+    for (let a = 0; a < 15; a++) {
+      for (let b = 0; b < a; b++) {
+        document.write("&nbsp *");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<br/><hr/>");
+
+    // Равносторонний треугольник
+
+    let e = 15;
+    let i = 0;
+
+    for (let a = 0; a < e; a++) {
+
+      for (let b = 0; b < (2 * e / 2 - a); b++) {
+        document.write(" &nbsp ");
+      }
+      for (let c = 0; c < i; c++) {
+        document.write("&nbsp *");
+      }
+      i++;
+
+      document.write("<br/>");
+    }
+
+    document.write("<br/><hr/>");
+
+    // Ромб
+
+    let r = 0;
+
+    for (let a = 0; a < e; a++) {
+
+
+      for (let b = 0; b < (2 * e / 2 - a); b++) {
+        document.write(" &nbsp");
+      }
+
+      for (let c = 0; c < r; c++) {
+        document.write("&nbsp *");
+
+      }
+      r++;
+
+      document.write("<br/>");
+    }
+
+    for (let a = 0; a < e; a++) {
+
+
+      for (let b = 0; b < (2 / e * 2 + a); b++) {
+        document.write(" &nbsp");
+      }
+
+      for (let c = 0; c < r; c++) {
+        document.write("&nbsp *");
+
+      }
+      r--;
+
+      document.write("<br/>");
+    }
+  </script>
+
 </head>
 
 <body>
