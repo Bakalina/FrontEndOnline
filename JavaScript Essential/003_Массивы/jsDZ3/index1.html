@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Требуется: создать массив размерностью N элементов, заполнить его произвольными целыми
+        // значениями.Вывести наибольшее значение массива, наименьшее значение массива, общую сумму
+        // элементов, среднее арифметическое всех элементов, вывести все нечетные значения.
+
+        let a = [12, 35, 76, 66, 87, 88, 78, 1];
+        let b = [];
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] > b) {
+                b = a[i];
+            }
+        }
+        document.write('Максимальное значение массива = ' + b + '<br/>');
+
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] < b) {
+                b = a[i];
+            }
+        }
+        document.write('Минимальное значение массива = ' + b + '<br/>');
+
+        
+    </script>
+</body>
+
+</html>
