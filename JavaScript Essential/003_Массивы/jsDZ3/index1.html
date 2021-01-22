@@ -25,33 +25,32 @@
                 b = a[i];
             }
         }
-        document.write('Максимальное значение массива = ' + b + '<br/>');
+        document.write('Максимальное значение массива = ' + b + '<br/><hr/>');
 
         for (let i = 0; i < a.length; i++) {
             if (a[i] < b) {
                 b = a[i];
             }
         }
-        document.write('Минимальное значение массива = ' + b + '<br/>');
+        document.write('Минимальное значение массива = ' + b + '<br/><hr/>');
 
         for (let i = 0; i < a.length; i++) {
             if (sum += a[i]) {}
         }
-        document.write('Сумма всех элементов массива = ' + sum + '<br/>');
+        document.write('Сумма всех элементов массива = ' + sum + '<br/><hr/>');
 
         for (let i = 0; i < a.length; i++) {
             if (d += a[i]) {
-                c = d / (i + 1);
+                c = d / a.length;
             }
         }
-        document.write('Cреднее арифметическое всех элементов = ' + c + '<br/>');
+        document.write('Cреднее арифметическое всех элементов = ' + c + '<br/><hr/>');
 
         for (let i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 0) {
-                r = a[i]
+            if (a[i] % 2 != 0) {
+                document.write('Нечетное значение = ' + a[i] + '<br/>');
             }
         }
-        document.write('Все нечетные значения = ' + r + '<br/>');
     </script>
 </body>
 
