@@ -15,9 +15,9 @@
         // над которыми хочет произвести операцию и выбрать саму операцию.
 
 
-        let a = +prompt("Введите первое число");
+        let a = parseInt(prompt("Введите первое число"));
         let c = prompt("введите знак + - * / ");
-        let b = +prompt("Введите второе число");
+        let b = parseInt(prompt("Введите второе число"));
         let result = 0;
 
         switch (c) {
@@ -33,6 +33,8 @@
             case "/":
                 result = div();
                 break;
+            default:
+                document.write("Значение не подходит!!!");
         }
 
 
@@ -50,10 +52,16 @@
         }
 
         function div() {
-            return a / b;
+            if (b !== 0) {
+                return a / b;
+            } else {
+                document.write("На 0 делить нельзя!")
+            }
         }
-        
-        document.write(a + " " + c + " " + b + " = " + result);
+
+        if (result !== undefined && c !== false) {
+            document.write(a + " " + c + " " + b + " = " + result);
+        }
     </script>
 </body>
 
