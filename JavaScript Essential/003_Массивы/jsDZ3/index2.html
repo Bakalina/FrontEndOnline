@@ -20,10 +20,11 @@
         arr[2] = Array(87, 87, 87, -88, 54);
         arr[3] = Array(54, -52, 15, 51, 46);
         arr[4] = Array(-54, 87, 48, 85, -87);
-
+        
+        
 
         for (let a = 0; a < arr.length; a++) {
-            for (let b = 0; b < arr.length; b++) {
+            for (let b = 0; b < arr[a].length; b++) {
 
                 if (a == b) {
                     if (arr[a][b] > 0) {
