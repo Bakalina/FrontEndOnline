@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Напишите функцию, которая будет принимать число и определять:
+        // 1. Является ли введенное число положительным или отрицательным.
+        // 2. Является ли оно простым
+        // 3. Делится ли оно на 2, 5, 3, 6, 9 без остатка
+
+        let num = prompt("Введите любое число", "0");
+
+
+        function a() {
+            document.write("Вы ввели число = " + num + "<br/>")
+
+
+            if (num > 0) {
+                document.write("Введенное число является положительным" + "<br/>")
+            } else if (num < 0) {
+                document.write("Введенное число является отрицательным" + "<br/>")
+            }
+
+            let q = true;
+            for (let b = 2; b < num; b++) {
+                if (num % b == 0) {
+                    q = false;
+                    break;
+                }
+            }
+
+            if (q == false || num <= 2) {
+                document.write("Введенное число не является простым" + "<br/>")
+            } else {
+                document.write("Введенное число является простым" + "<br/>")
+            }
+
+
+        }
+        a();
+    </script>
+</body>
+
+</html>
