@@ -15,9 +15,9 @@
         // над которыми хочет произвести операцию и выбрать саму операцию.
 
 
-        let a = parseInt(prompt("Введите первое число"));
+        let a = +prompt("Введите первое число");
         let c = prompt("введите знак + - * / ");
-        let b = parseInt(prompt("Введите второе число"));
+        let b = +prompt("Введите второе число");
         let result = 0;
 
         switch (c) {
@@ -55,7 +55,7 @@
             if (b !== 0) {
                 return a / b;
             } else {
-                document.write("На 0 делить нельзя!")
+                document.write("На 0 делить нельзя!");
             }
         }
 
