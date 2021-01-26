@@ -13,28 +13,61 @@
             // Создать в объекте вложенный объект–« Приложение».Создать в объекте« Приложение», вложенные объекты, «
             // Заголовок, Тело, Футер, Дата».Создать методы для заполнения и отображения документа.
 
-        let doc = new Object ();
+        let documents = {
+            heading: "head",
+            body: "body",
+            footer: "footer",
+            date: "date",
 
-        doc.header = "head";
-        doc.main = "body";
-        doc.footer = "footer";
-        doc.date = "date";
-        doc.program = new Object ();
-        doc.program.header = "head";
-        doc.program.main = "body";
-        doc.program.footer = "footer";
-        doc.program.date = "date";
+            program: {
+                heading: "head",
+                body: "body",
+                footer: "footer",
+                date: "date",
+            },
 
-
-        for (let element in doc) {
-            document.write(doc[element]);
-            for (let cons in doc.program) {
-                document.write(doc.program[cons]);
-                
-            }
+            question1: function () {
+                let head1 = prompt("Заглавление");
+                let bod1 = prompt("Текст");
+                let foot1 = prompt("Автор");
+                let dat1 = prompt("Дата");
+                documents.program.heading = head1;
+                documents.program.body = bod1;
+                documents.program.footer = foot1;
+                documents.program.date = dat1;
+            },
             
+            ansver1: function () {
+                document.write(documents.program.heading + "<br/>");
+                document.write(documents.program.body + "<br/>");
+                document.write(documents.program.footer + "<br/>");
+                document.write(documents.program.date + "<br/>");
+            },
+
+            question2: function () {
+                let head2 = prompt("Заглавление");
+                let bod2 = prompt("Текст");
+                let foot2 = prompt("Автор");
+                let dat2 = prompt("Дата");
+                documents.heading = head2;
+                documents.body = bod2;
+                documents.footer = foot2;
+                documents.date = dat2;
+            },
+
+            ansver2: function () {
+                document.write(documents.heading + "<br/>");
+                document.write(documents.body + "<br/>");
+                document.write(documents.footer + "<br/>");
+                document.write(documents.date + "<br/>");
+            },
         }
-       
+        
+
+        documents.question1();
+        documents.ansver1();
+        documents.question2();
+        documents.ansver2();
 
 
         
