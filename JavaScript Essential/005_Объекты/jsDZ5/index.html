@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+            // Создать объект« Документ», в котором определить свойства« Заголовок, Тело, Футер, Дата».
+            // Создать в объекте вложенный объект–« Приложение».Создать в объекте« Приложение», вложенные объекты, «
+            // Заголовок, Тело, Футер, Дата».Создать методы для заполнения и отображения документа.
+
+        let doc = new Object ();
+
+        doc.header = "head";
+        doc.main = "body";
+        doc.footer = "footer";
+        doc.date = "date";
+        doc.program = new Object ();
+        doc.program.header = "head";
+        doc.program.main = "body";
+        doc.program.footer = "footer";
+        doc.program.date = "date";
+
+
+        for (let element in doc) {
+            document.write(doc[element]);
+            for (let cons in doc.program) {
+                document.write(doc.program[cons]);
+                
+            }
+            
+        }
+       
+
+
+        
+
+    </script>
+</body>
+
+</html>
