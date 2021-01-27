@@ -15,11 +15,13 @@
 
         let arr = Array(5);
 
-        arr[0] = Array(12, 15, 87, 84, 84);
-        arr[1] = Array(88, -22, 54, 15, 51);
-        arr[2] = Array(87, 87, 87, -88, 54);
-        arr[3] = Array(54, -52, 15, 51, 46);
-        arr[4] = Array(-54, 87, 48, 85, -87);
+        arr[0] = Array(12, 15, 87, 84, 84, 84, 84, 84, 84);
+        arr[1] = Array(88, -22, 54, 15, 51, 84, 84, 84, 84);
+        arr[2] = Array(87, 87, 87, -88, 54, 84, 84, 84, 84);
+        arr[3] = Array(54, -52, 15, 51, 46, 84, 84, 84, 84);
+        arr[4] = Array(-54, 87, 48, 85, -87, 84, 84, 84, 84);
+        arr[5] = Array(54, -52, 15, 51, 46, 84, 84, 84, 84);
+        arr[6] = Array(-54, 87, 48, 85, -87, 84, 84, 84, 84);
         
         
 
@@ -38,7 +40,7 @@
 
         for (let a = 0; a < arr.length; a++) {
             document.write("<br/>");
-            for (let b = 0; b < arr.length; b++) {
+            for (let b = 0; b < arr[a].length; b++) {
                 document.write(arr[a][b]);
             }
         }

@@ -22,16 +22,16 @@
 
         switch (c) {
             case "+":
-                result = add();
+                result = add(a,b);
                 break;
             case "-":
-                result = sub();
+                result = sub(a,b);
                 break;
             case "*":
-                result = mul();
+                result = mul(a,b);
                 break;
             case "/":
-                result = div();
+                result = div(a,b);
                 break;
             default:
                 document.write("Значение не подходит!!!");
@@ -39,19 +39,19 @@
 
 
 
-        function add() {
+        function add(a,b) {
             return a + b;
         }
 
-        function sub() {
+        function sub(a,b) {
             return a - b;
         }
 
-        function mul() {
+        function mul(a,b) {
             return a * b;
         }
 
-        function div() {
+        function div(a,b) {
             if (b !== 0) {
                 return a / b;
             } else {
