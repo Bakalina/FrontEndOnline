@@ -9,69 +9,67 @@
 
 <body>
     <script>
-            // Создать объект« Документ», в котором определить свойства« Заголовок, Тело, Футер, Дата».
-            // Создать в объекте вложенный объект–« Приложение».Создать в объекте« Приложение», вложенные объекты, «
-            // Заголовок, Тело, Футер, Дата».Создать методы для заполнения и отображения документа.
+        // Создать объект« Документ», в котором определить свойства« Заголовок, Тело, Футер, Дата».
+        // Создать в объекте вложенный объект–« Приложение».Создать в объекте« Приложение», вложенные объекты, «
+        // Заголовок, Тело, Футер, Дата».Создать методы для заполнения и отображения документа.
 
         let documents = {
-            heading: "head",
-            body: "body",
-            footer: "footer",
-            date: "date",
+            heading: "1",
+            body: "2",
+            footer: "3",
+            date: "4",
 
             program: {
-                heading: "head",
-                body: "body",
-                footer: "footer",
-                date: "date",
-            },
-
-            question1: function () {
-                let head1 = prompt("Заглавление");
-                let bod1 = prompt("Текст");
-                let foot1 = prompt("Автор");
-                let dat1 = prompt("Дата");
-                documents.program.heading = head1;
-                documents.program.body = bod1;
-                documents.program.footer = foot1;
-                documents.program.date = dat1;
-            },
-            
-            ansver1: function () {
-                document.write(documents.program.heading + "<br/>");
-                document.write(documents.program.body + "<br/>");
-                document.write(documents.program.footer + "<br/>");
-                document.write(documents.program.date + "<br/>");
-            },
-
-            question2: function () {
-                let head2 = prompt("Заглавление");
-                let bod2 = prompt("Текст");
-                let foot2 = prompt("Автор");
-                let dat2 = prompt("Дата");
-                documents.heading = head2;
-                documents.body = bod2;
-                documents.footer = foot2;
-                documents.date = dat2;
-            },
-
-            ansver2: function () {
-                document.write(documents.heading + "<br/>");
-                document.write(documents.body + "<br/>");
-                document.write(documents.footer + "<br/>");
-                document.write(documents.date + "<br/>");
+                heading: {a: ""},
+                body: {b: ""},
+                footer: {c: ""},
+                date: {d: ""},
             },
         }
-        
-
-        documents.question1();
-        documents.ansver1();
-        documents.question2();
-        documents.ansver2();
 
 
-        
+        function question1() {
+            let head1 = prompt("Заглавление");
+            let bod1 = prompt("Текст");
+            let foot1 = prompt("Автор");
+            let dat1 = prompt("Дата");
+            documents.program.heading.a = head1;
+            documents.program.body.b = bod1;
+            documents.program.footer.c = foot1;
+            documents.program.date.d = dat1;
+        }
 
+        function ansver1() {
+            document.write(documents.program.heading.a + "<br/>");
+            document.write(documents.program.body.b + "<br/>");
+            document.write(documents.program.footer.c + "<br/>");
+            document.write(documents.program.date.d + "<br/>");
+        }
+
+        function question2() {
+            let head2 = prompt("Заглавление");
+            let bod2 = prompt("Текст");
+            let foot2 = prompt("Автор");
+            let dat2 = prompt("Дата");
+            documents.heading = head2;
+            documents.body = bod2;
+            documents.footer = foot2;
+            documents.date = dat2;
+        }
+
+        function ansver2() {
+            document.write(documents.heading + "<br/>");
+            document.write(documents.body + "<br/>");
+            document.write(documents.footer + "<br/>");
+            document.write(documents.date + "<br/>");
+        }
+
+
+
+        question1();
+        ansver1();
+        question2();
+        ansver2();
     </script>
 </body>
 
