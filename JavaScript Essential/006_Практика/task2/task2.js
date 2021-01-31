@@ -37,7 +37,16 @@ function calculate(n1, n2, sign) {
     // }
 
 
-    if (n1 instanceof Object && n2 instanceof Object || isNaN(n1['a']) || isNaN(n2['b']) ) {
+        
+        while (typeof n1['a'] !== 'number'|| isNaN(n1['a'])) {
+                    alert('Введите корректное первое число');
+                    n1['a'] = parseInt(prompt('Первое число'));
+        }
+        while (typeof n2['b'] !== 'number' || isNaN(n2['b'])) {
+                    alert('Введите корректное второе число');
+                    n2['b'] = parseInt(prompt('Второе число'));
+                }
+                
         let resObject = {};
         switch (sign) {
             case '+':
@@ -64,6 +73,7 @@ function calculate(n1, n2, sign) {
 
         return resObject;
 
-    }
+    
+
 
 }
