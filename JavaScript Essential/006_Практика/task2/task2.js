@@ -17,7 +17,7 @@ function calculate(n1, n2, sign) {
     //         alert('Введите корректное второе число');
     //         n2 = parseInt(prompt('Второе число'));
     //     }
-    
+
     //     switch (sign) {
     //         case '+':
     //             return n1 + n2;
@@ -37,17 +37,33 @@ function calculate(n1, n2, sign) {
     // }
 
 
-    if ( n1 instanceof Object && n2 instanceof Object ) {
-        let resObj = {};
-
-
+    if (n1 instanceof Object && n2 instanceof Object || isNaN(n1['a']) || isNaN(n2['b']) ) {
+        let resObject = {};
         switch (sign) {
             case '+':
-                resObj.resultA = n1['a'] + n2['b'];
+                resObject.x = n1['a'] + n2['b'];
                 break;
-                
+            case '-':
+                resObject.x = n1['a'] - n2['b'];
+                break;
+            case '*':
+                resObject.x = n1['a'] * n2['b'];
+                break;
+            case '/':
+                resObject.x = n1['a'] / n2['b'];
+                while (n2['b'] === 0 || isNaN(n2['b'])) {
+                    alert('На ноль делить нельзя. Введите другое число!!!');
+                    n2['b'] = parseInt(prompt('Введите любое число кроме ноля'));
+                }
+                resObject.x = n1['a'] / n2['b'];
+                break;
+            default:
+                resObject.x = 'Неверный знак операции';
         }
-        return resObj;
+
+
+        return resObject;
+
     }
 
 }
