@@ -46,7 +46,7 @@ function calculate(n1, n2, sign) {
                     alert('Введите корректное второе число');
                     n2['b'] = parseInt(prompt('Второе число'));
                 }
-                
+
         let resObject = {};
         switch (sign) {
             case '+':
@@ -70,10 +70,6 @@ function calculate(n1, n2, sign) {
                 resObject.x = 'Неверный знак операции';
         }
 
-
         return resObject;
-
-    
-
 
 }
