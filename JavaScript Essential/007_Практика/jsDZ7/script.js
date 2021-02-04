@@ -4,7 +4,7 @@ let fivetenQuestion = {
     game: function () {
         let counter = 0;
         start = confirm('Давай ссыграем?');
-        if (start != false) {
+        if (start == true) {
             alert('ПРАВДА или ЛОЖЬ')
             oneQuestion = confirm('1) Левое полушарие мозга отвечает за логику, а правое — за творчество ?');
             if (oneQuestion == true) {
