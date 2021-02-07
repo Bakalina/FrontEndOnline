@@ -14,13 +14,14 @@ let fivetenQuestion = {
                 let twoQuestion = confirm('Земля — круглая?');
                 if (twoQuestion == true) {
                     alert('Ответ не верный');
-                    let threeQuestion = confirm('Эверест — самая высокая гора в мире');
-                    threeQuestion == true ? (alert('Нет, хотя это очень частое заблуждение.'), counterFalse++) : (alert('Если брать все возвышенности на Земле, включая их скрытую под водой часть, то самая высокая гора в мире — это гавайская Мануа-Кеа'), counterTruth++);
+                    counterFalse++;
+                    let threeQuestion = confirm('Эверест - самая большая гора');
+                    threeQuestion == true ? (alert('Ответ не верный'), counterFalse++) : (alert('Если брать все возвышенности на Земле, включая их скрытую под водой часть, то самая высокая гора в мире — это гавайская Мануа-Кеа'), counterTruth++);
                 } else {
                     alert('Невероятно, но факт. Земля не круглая.');
                     counterTruth++;
                     let fourQuestion = confirm('Банан — это ягода, а клубника — нет');
-                    fourQuestion == true ? (alert('Да, это правда.'), counterTruth++) : (alert('Удивитесь, но это все-таки правда.'), counterFalse++);
+                    fourQuestion == true ? (alert('Да, это правда.'), counterTruth++) : (alert('Ответ не верный'), counterFalse++);
                 }
             } else {
                 alert('Да, это просто миф.');
@@ -42,18 +43,12 @@ let fivetenQuestion = {
                         sevenQuestion == true ? (alert('Ответ не верный'), counterFalse++) : (alert('Нет, это не так. Алкоголь крайне негативно воздействует на наш организм, особенно при частом употреблении, однако он не способен «убить» мозговые клетки.'), counterTruth++);
                     }
                 }
-                counterTruth > counterFalse?alert('Ураааа Вы выиграли!!!'):alert('Вы проиграли!!!');
-            }
 
+            }
+            counterTruth > counterFalse ? alert('Ураааа Вы выиграли!!!') : alert('Вы проиграли!!!');
 
         } else {
             alert('До свидания!');
         }
-
-        // if (counterTruth > counterFalse) {
-        //     alert('Ураааа Вы выиграли!!!');
-        // } else {
-        //     alert('Вы проиграли!!!');
-        // }
     }
 }
