@@ -1,4 +1,4 @@
-let fivetenQuestion = {
+let questions = {
 
 
     game: function () {
