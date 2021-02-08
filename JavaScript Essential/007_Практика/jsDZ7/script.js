@@ -45,6 +45,7 @@ let questions = {
                 }
 
             }
+            
             counterTruth > counterFalse ? alert('Ураааа Вы выиграли!!!') : alert('Вы проиграли!!!');
             
         } else {
