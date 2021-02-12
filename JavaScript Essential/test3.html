@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let calculator = {
+            a: 0,
+            b: 0,
+            read: function () {
+                this.a = +prompt('');
+                this.b = +prompt('');
+                return;
+            },
+            sum: function () {
+                let result = 0;
+                for (let key in calculator) {
+                    if (typeof calculator[key] == 'number') {
+                        result = calculator[key] + calculator[key];
+                    }
+                    return result;
+                }
+
+            },
+            mul: function () {
+                let result = 0;
+                for (let key in calculator) {
+                    if (typeof calculator[key] == 'number') {
+                        result = calculator[key] * calculator[key];
+                    }
+                    return result;
+                }
+            },
+
+
+
+        };
+
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+    </script>
+</body>
+
+</html>
