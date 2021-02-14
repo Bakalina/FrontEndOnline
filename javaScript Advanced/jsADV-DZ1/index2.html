@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Human(name, age) {
+            this.mame = name;
+            this.age = age;
+        }
+
+        Human.prototype.toString = function () {
+            let write = " Имя - " + this.mame + " --- возраст - " + this.age + " года." + "<br/>";
+            return write;
+        }
+
+        let man = [];
+
+        man[0] = new Human("Bob1", 10);
+        man[1] = new Human("Bob2", 9);
+        man[2] = new Human("Bob3", 17);
+        man[3] = new Human("Bob4", 13);
+        man[4] = new Human("Bob5", 14);
+        man[5] = new Human("Bob6", 15);
+        man[6] = new Human("Bob7", 3);
+        man[7] = new Human("Bob8", 12);
+        man[8] = new Human("Bob9", 18);
+        man[9] = new Human("Bob10", 11);
+
+        function sort(man) {
+            man.sort((a, b) => a.age > b.age ? 1 : -1);
+        }
+        sort(man);
+
+        document.write(man.join(""));
+    </script>
+
+</body>
+
+</html>
