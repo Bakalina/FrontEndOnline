@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Класс "Виртуальный друг"</title>
+
+    <script>
+        let Friend = function(mood) {
+
+            this.mood = mood;
+
+            // если настроение "хорошее"
+            if (mood === "nice") {
+                this.talk = function() {
+                    alert("Hello what's up?");
+                };
+            }
+            // если настроение "плохое"
+            else if (mood === "bad") {
+                this.talk = function() {
+                    alert("Sorry, I don't want talk with you.");
+                };
+            }
+            // если настроение не определено
+            else {
+                this.talk = function() {
+                    alert("Hi");
+                };
+            }
+        }
+
+        let friendMood = prompt("Type friend mood (nice/bad):");
+        let David = new Friend(friendMood);
+
+        David.talk();
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
