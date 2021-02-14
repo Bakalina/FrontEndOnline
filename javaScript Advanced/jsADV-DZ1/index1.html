@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function Dog(name, age) {
+            this.name = name;
+            this.age = age;
+            this.action = function () {
+                document.write("Vote " + this.name + "!!!" + "<br/>")
+            }
+
+        };
+
+        Dog.prototype.toString = function () {
+            document.write(" Имя - " + this.name + " Возраст - " + this.age + " года. " + this.type + "<br/>");
+        }
+
+        Dog.prototype.type = "Animals";
+
+        let buldog = new Dog('Bob', 3);
+        let husky = new Dog("Laika", 2);
+
+        Dog(buldog);
+        buldog.action();
+        Dog(husky);
+        husky.action();
+
+        console.log(buldog);
+        console.log(husky);
+    </script>
+</body>
+
+</html>
