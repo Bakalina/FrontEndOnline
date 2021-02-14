@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function Human(name, age, growth, weight) {
+            this.name = name;
+            this.age = age;
+            this.growth = growth;
+            this.weight = weight;
+        }
+
+        Human.prototype.toString = function () {
+            let x = 'Имя - ' + this.name + '<br/>' + 'Возраст - ' + this.age + ' лет ' + '<br/>' + 'Рост - ' + this
+                .growth + ' см.' + '<br/>' + 'Вес - ' + this.weight + ' кг.' + '<br/>' + 'Статус - ' + this.user +
+                '<br/>' + '<hr/>';
+            return x;
+        }
+
+        Human.prototype.user = "Client";
+
+        Human.prototype.salutation = function () {
+            document.write("Hello! My name is " + this.name + "<br/");
+        }
+
+        let bob = new Human("Bob", 18, 175, 75);
+        let rob = new Human("Rob", 20, 185, 80);
+
+
+        document.write(bob);
+        document.write(rob);
+    </script>
+
+</body>
+
+</html>
