@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //  Class expression (выражение класса). Как в функциях, так и с классами можно создавать именованные и безымянные выражения. 
+
+        // безымянный
+        let Rectangle = class {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        };
+        console.log(Rectangle);
+        console.log(Rectangle.name);
+
+
+        // именованный 
+        //В этом сдучае выражения класса находится в локальной области видимости класса и может быть получено через свойства самого класса, а не его экземпляра
+        let Rectangle1 = class Rectangle2 {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        };
+        console.log(Rectangle1);
+        console.log(Rectangle1.name);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

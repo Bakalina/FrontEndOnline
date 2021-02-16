@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //Ключевое слово super используется для вызова метода из родительского класса
+        // Если же у дочернего класса свой constructor, то, чтобы в нем вызвать конструктор родителя - используется синтаксис super() с аргументами для родителя.
+
+        // базовый класс 
+        class Human {
+            constructor(name) {
+                this.name = name;
+            }
+            talk() {
+                document.write("Hello My Name is " + this.name + "<br />")
+            }
+        }
+
+        // производный класс (дочерний класс)
+        class Student extends Human {
+            talk() {
+                super.talk()
+                document.write("And this is method from class Student <hr />")
+            }
+        }
+        class Worker extends Human {
+            constructor() {
+                super("Tom")
+                this.speciality = "Software developer";
+            }
+            info() {
+                document.write(this.name + " is " + this.speciality + "<br />")
+            }
+        }
+
+
+        let Alex = new Student("Alexander");
+        let Tom = new Worker()
+
+        Alex.talk();
+        console.log(Alex);
+
+        Tom.talk();
+        Tom.info();
+        console.log(Tom)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

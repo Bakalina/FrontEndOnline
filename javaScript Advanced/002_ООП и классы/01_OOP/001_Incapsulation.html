@@ -1,0 +1,36 @@
+﻿<!--
+Инкапсуляция - сокрытие релаизаци и данных объекта.
+-->
+
+<html>
+
+<head>
+    <title>Инкапсуляция в JavaScript</title>
+
+    <script>
+        let MyClass = function() {
+
+            // закрытый метод
+            let privateMethod = function() {
+                document.write("Закрытый метод");
+            };
+
+            // открытый метод
+            this.publicMethod = function() {
+                document.write("Открытый метод <br />");
+                privateMethod();
+            };
+
+        };
+        let obj = new MyClass();
+        obj.publicMethod();
+
+        obj.privateMethod(); // ошибка
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

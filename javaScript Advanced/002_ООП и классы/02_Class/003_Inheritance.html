@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <script>
+        // Наследование
+
+        // базовый класс 
+        class Human {
+            constructor(name) {
+                this.name = name;
+            }
+            talk() {
+                document.write("Hello My Name is " + this.name + "<br />")
+            }
+        }
+
+        // производный класс (дочерний класс)
+        class Student extends Human {
+            //по умолчанию используется конструктор из родительского класса
+            talk() {
+                document.write("Hi " + this.name + "<br />")
+            }
+        }
+
+        // Создать экземпляр родителя не обязательно
+        let human = new Human("name");
+        human.talk();
+
+        let Alex = new Student("Alexander");
+
+        Alex.talk();
+        console.log(Alex)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

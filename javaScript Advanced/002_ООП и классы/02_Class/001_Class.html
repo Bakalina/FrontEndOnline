@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--Классы в JavaScript были введены в ECMAScript 2015 и представляют собой синтаксический сахар над существующим в JavaScript
+        механизмом прототипного наследования. Синтаксис классов не вводит новую объектно-ориентированную модель, а предоставляет
+        более простой и понятный способ создания объектов и организации наследования.
+        Метод constructor — специальный метод, необходимый для создания и инициализации объектов, созданных, с помощью класса.
+        Синтаксис get связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.
+        -->
+    <script>
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+
+            area() {
+                return this.calcArea();
+            }
+
+            calcArea() {
+                return this.height * this.width;
+            }
+        }
+
+        let square = new Rectangle(10, 10);
+
+        console.log(square.area());
+        console.log(square.calcArea());
+        console.log(square);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

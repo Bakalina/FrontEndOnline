@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <script>
+        class Car {
+            constructor(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+            drive() {
+                document.write("This is " + this.name + "  and it`s " + this.color)
+            }
+        }
+        class Mazda extends Car {}
+        class Toyota extends Car {}
+        class Suzuki extends Car {
+            constructor(name, color, door) {
+                    super(name, color)
+                    this.door = door;
+                }
+                // drive() {
+                //     super.drive()
+                //     document.write(" And it has " + this.door + " doors")
+                // }
+        }
+        class Ford extends Car {
+            constructor(name, color, door, engine) {
+                super(name, color)
+                this.door = door;
+                this.engine = engine;
+            }
+            drive() {
+                super.drive()
+                document.write(" with " + this.door + " doors and " + this.engine + "-litre engine")
+            }
+        }
+
+
+        let myMazda = new Mazda("CX 5", "red");
+        let myToyota = new Toyota("Corolla", "black");
+        let mySuzuki = new Suzuki("Vitara", "blue", 5);
+        let myFord = new Ford("Fiesta", "white", 5, 1.25);
+        let myMustang = new Ford("Mustang", "green", 3, 5.2)
+
+        myMazda.drive();
+        document.write("<br/>")
+        myToyota.drive();
+        document.write("<br/>")
+        mySuzuki.drive();
+        document.write("<br/>");
+        myFord.drive();
+        document.write("<br/>");
+        myMustang.drive();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
