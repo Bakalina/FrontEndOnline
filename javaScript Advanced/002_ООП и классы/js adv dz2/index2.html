@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Human {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                this.company = "ITVDN"
+            };
+
+            info() {
+                document.write('Имя - ' + this.name + ' Возраст - ' + this.age + ' лет.' + ' Company - ' + this
+                    .company + '<br/>');
+            };
+
+        };
+
+        class Student extends Human {
+
+            constructor(name, age, school) {
+                super(name, age);
+                this.status = "Student";
+                this.school = school;
+            };
+
+            info() {
+                super.info()
+                document.write(' Статус - ' + this.status + '<br/>');
+                document.write(' Школа - ' + this.school + '<br/>' + '<hr/>');
+            };
+        };
+
+        class Worker extends Human {
+            constructor(name, age, work) {
+                super(name, age);
+                this.status = "Worker";
+                this.work = work;
+            };
+
+            info() {
+                super.info()
+                document.write(' Статус - ' + this.status + '<br/>');
+                document.write(' Должность - ' + this.work + '<br/>' + '<hr/>');
+            };
+        };
+
+        class Manager extends Human {
+            constructor(name, age, itManager) {
+                super(name, age);
+                this.status = "Manager";
+                this.itManager = itManager;
+            };
+
+            info() {
+                super.info()
+                document.write(' Статус - ' + this.status + '<br/>');
+                document.write(' Должность - ' + this.itManager + '<br/>' + '<hr/>');
+            };
+        };
+
+        let adam = new Student("Adam", 18, "ITVDN");
+        let bob = new Worker('Bob', 46, "Developer in ITVDN");
+        let rob = new Manager('Rob', 27, "Account manager ITVDN");
+
+
+        adam.info();
+        bob.info();
+        rob.info();
+    </script>
+
+</body>
+
+</html>
