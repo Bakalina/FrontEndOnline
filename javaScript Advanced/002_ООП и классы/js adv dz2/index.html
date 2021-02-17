@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Human {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            toString() {
+                let write = " Имя - " + this.name + " --- возраст - " + this.age + " года." + "<br/>";
+                return write;
+            }
+        }
+
+        let man = new Array;
+
+        man.push(
+            bob1 = new Human("Bob1", 10),
+            bob2 = new Human("Bob2", 9),
+            bob3 = new Human("Bob3", 17),
+            bob4 = new Human("Bob4", 13),
+            bob5 = new Human("Bob5", 14),
+            bob6 = new Human("Bob6", 15),
+            bob7 = new Human("Bob7", 3),
+            bob8 = new Human("Bob8", 12),
+            bob9 = new Human("Bob9", 18),
+            bob10 = new Human("Bob10", 11),
+            bob11 = new Human("Bob11", 2),
+        );
+
+        function sort(man) {
+            man.sort((a, b) => a.age > b.age ? 1 : -1);
+        }
+        sort(man);
+
+        document.write(man.join(""));
+    </script>
+
+</body>
+
+</html>
