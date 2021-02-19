@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>getElementById</title>
+</head>
+
+<body>
+    <p id="output">Hello world</p>
+    <a id="link" href="http://edu.cbsystematics.com">Education site</a>
+
+    <script>
+        // скрипт должен располагаться после элементов HTML, которые в этом скрипте используются.
+        // получение элемента со страницы по значению атрибута id
+        let paragraph = document.getElementById("output");
+        let hyperlink = document.getElementById("link");
+
+        // innerHTML - текст между открывающим и закрывающим тегами.
+        paragraph.innerHTML = "HELLO WORLD !!!";
+        hyperlink.innerHTML = "EDUCATION SITE !!!";
+    </script>
+</body>
+
+</html>
