@@ -6,23 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Первый способ -->
+   
+
+
+    <!-- Второй способ -->
+
+    <!-- <script>
+        window.onload = function () {
+            let paragr = document.getElementsByTagName("p");
+
+            (function () {
+                for (let i = 0; i < paragr.length; i++) {
+                    paragr[i].innerHTML = "PARAGRAPH";
+                }
+            })();
+        }
+    </script> -->
+
 </head>
 
 <body>
 
+    <div id="q">
+        Hello
+        <p>Hello</p>
+        <p>Hello</p>
+        <div>Hello</div>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+    </div>
+    <p>Hello</p>
+    <p>Hello</p>
+    <div>Hello</div>
+    <p>Hello</p>
+    <i>Hello</i>
 
 
 
+    <script>
 
+        let paragr = document.getElementsByTagName("p");
+        paragr.innerHTML = "PARAGRAPH";
 
-
-
-
-
-
-
-
-
+    </script>
 
     <!-- Задание 1
     Разработайте страницу с произвольным количеством HTML элементов. Создайте модуль, который после загрузки страницы
