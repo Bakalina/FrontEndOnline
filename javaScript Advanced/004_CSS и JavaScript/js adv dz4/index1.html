@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Задание 1
+    Разработайте игру «Угадай значение». Страница загадывает число от 1 до 100. Пользователь в поле ввода вводит
+    значение пытаясь угадать загаданное число. Если пользователь не угадывает значение, страница выводит сообщение с
+    текстом «загаданное значение больше введенного вами» или «загаданное значение меньше введенного вами». Подумайте,
+    как можно применить DHTML в таком приложении. -->
+
+</head>
+
+<body>
+    <p>Угадай число от 0 до 100</p>
+    <input type="text" id="" class="">
+    <input type="submit" value="Enter" class="">
+    <p class="options"></p>
+    <p class="result"></p>
+    <p class="hint"></p>
+
+
+
+
+
+
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let options = document.querySelector('options');
+        let result = document.querySelector('result');
+        let hint = document.querySelector('hint');    
+
+    </script>
+</body>
+
+</html>
