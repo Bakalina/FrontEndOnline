@@ -17,8 +17,8 @@
 
 <body>
     <p>Угадай число от 0 до 100</p>
-    <input type="text" id="" class="">
-    <input type="submit" value="Enter" class="">
+    <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit">
     <p class="options"></p>
     <p class="result"></p>
     <p class="hint"></p>
@@ -30,11 +30,50 @@
 
 
     <script>
-        let randomNumber = Math.floor(Math.random() * 100) + 1;
-        let options = document.querySelector('options');
-        let result = document.querySelector('result');
-        let hint = document.querySelector('hint');    
+        class Game {
+            constructor() {
+                this.randomNumber = Math.floor(Math.random() * 100) + 1;
+                this.options = document.querySelector('options');
+                this.result = document.querySelector('result');
+                this.hint = document.querySelector('hint');
+                this.guessCount = 1;
+                this.resetButton;
+            }
 
+            checkGuess() {
+                let userGuess = Number(guessField.value);
+                if (guessCount === 1) {
+                    options.textContent = 'Previous guesses: ';
+                }
+                options.textContent += userGuess + ' ';
+
+                if (userGuess === randomNumber) {
+                    result.textContent = 'Congratulations! You got it right!';
+                    result.style.backgroundColor = 'green';
+                    hint.textContent = '';
+                    setGameOver();
+                } else if (guessCount === 10) {
+                    result.textContent = '!!!GAME OVER!!!';
+                    setGameOver();
+                } else {
+                    result.textContent = 'Wrong!';
+                    result.style.backgroundColor = 'red';
+                    if (userGuess < randomNumber) {
+                        hint.textContent = 'Last guess was too low!';
+                    } else if (userGuess > randomNumber) {
+                        hint.textContent = 'Last guess was too high!';
+                    }
+                }
+
+                guessCount++;
+                guessField.value = '';
+                guessField.focus();
+
+            }
+        }
+
+        let x = new Game;
+        x.checkGuess();
     </script>
 </body>
 
