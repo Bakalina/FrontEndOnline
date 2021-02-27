@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Удаление обработчикоа DOM Level 2</title>
+    <script>
+        window.onload = function() {
+
+            let btn1 = document.getElementById("button1");
+            let btn2 = document.getElementById("button2");
+
+
+            btn1.addEventListener("click", handler, false);
+            btn2.addEventListener("click", removeHandler, false);
+
+
+            function handler() {
+                alert("Обработчик события нажатия кнопки");
+            }
+
+            function removeHandler() {
+                // удаление обработчика handler с кнопки с id button1
+                btn1.removeEventListener("click", handler, false);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="button1" type="button" value="Кнопка" />
+    <input id="button2" type="button" value="Удалить обработчик" />
+</body>
+
+</html>

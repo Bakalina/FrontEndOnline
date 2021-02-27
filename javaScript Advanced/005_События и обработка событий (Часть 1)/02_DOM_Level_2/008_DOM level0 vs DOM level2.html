@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+
+            // addEventListener(событие, обработичк, нужен_перехват_события)
+
+            let btn1 = document.getElementById("button1");
+            let btn2 = document.getElementById("button2");
+
+            if (btn1.addEventListener) // проверка поддержки DOM Level 2
+            {
+                // Установка обработичка на событие click для кнопки с id button1
+                btn1.addEventListener("click",
+                    function() {
+                        alert("Обработчик события нажатия кнопки");
+                    },
+                    false);
+                btn1.addEventListener("click",
+                    function() {
+                        btn1.value;
+                    },
+                    false);
+            }
+
+            btn2.onclick = function() {
+                alert("hello")
+            };
+            btn2.onclick = function() {
+                alert("hello 2")
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <input id="button1" type="button" value="DOM level 2" />
+    <input id="button2" type="button" value="DOM level 0" />
+</body>
+
+</html>
+
+</html>
