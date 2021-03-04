@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Задание 2
+    Создайте страницу для авторизации. На странице должны находиться поля вводов для логина и пароля, кнопка «Вход» и
+    checkbox «Запомнить меня». С помощью CSS, который расположен в отдельном файле, выровняйте форму для авторизации по
+    центру страницы. Разработайте сценарий, который будет срабатывать по нажатию на кнопку «Вход». Сценарий должен
+    реализовывать следующее поведение:
+    - Если при нажатии на кнопку поля ввода пустые – выводиться сообщение (в теле страницы, не через alert) «Вы не
+    заполнили поля логин и пароль». Также поля вводов должны получить красный фон.
+    - Если введен логин admin и пароль 12345, то отобразить пользователю зеленым цветом сообщение «Вы авторизированы». -->
+</head>
+
+<body>
+    <form class="form">
+        <h2>Login to Web App</h2>
+        <div class="formInput">
+            <input type="text" name="login" placeholder="Username or Email">
+        </div>
+        <div class="formInput">
+            <input type="password" name="pass" placeholder="Password" required>
+        </div>
+        <div class="formCheck">
+            <input type="checkbox" name="keep" id="keep">
+            <label for="keep">Remember me this computer</label>
+        </div>
+        <button type="submit">Login</button>
+        <div class="formReset">
+            <p>Forgot your password?</p>
+            <a href="#">Click here to reset it.</a>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
