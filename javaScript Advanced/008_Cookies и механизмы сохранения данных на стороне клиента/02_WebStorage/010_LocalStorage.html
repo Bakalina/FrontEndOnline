@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сохранение и извлечение данных sessionStorage</title>
+    <script>
+        window.addEventListener("load", init, false);
+
+        function init() {
+            let nameField = document.getElementById("name"),
+                emailField = document.getElementById("email"),
+                modelField = document.getElementById("model"),
+                getInfo = document.getElementById("getInfo"),
+                info = document.getElementById("info");
+
+            document.forms[0].onsubmit = function(e) {
+                if (nameField.value == '' && nameField.value == undefined || emailField.value == '' || modelField.value == '') {
+                    e.preventDefault()
+                } else {
+                    let newCustomer = {}
+                    newCustomer.id = Math.floor(Math.random() * 1000)
+                    newCustomer.name = nameField.value;
+                    newCustomer.email = emailField.value;
+                    newCustomer.model = modelField.value;
+                    newCustomer.data = new Date();
+                    localStorage.setItem(newCustomer.id, JSON.stringify(newCustomer));
+
+                }
+            }
+            getInfo.onclick = function() {
+                let key, value;
+                // перебираем все данные в хранилище
+                for (let i = 0; i < localStorage.length; i++) {
+                    // получаем ключ записи
+                    key = localStorage.key(i);
+                    // получаем по ключу объект
+                    value = JSON.parse(localStorage.getItem(key));
+                    info.innerHTML += value.name + " " + value.model + "<br />";
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label>Имя</label>
+        <input type="text" id="name" name="name" />
+        <label>Почта</label>
+        <input type="email" id="email" name="mail" />
+        <label>Модель</label>
+        <input name="shop" id="model" list="mobile">
+        <datalist id="mobile">
+            <option value="iPhone 7">
+                <option value="iPhone 8">
+                <option value="iPhone X">
+                <option value="iPhone 11">
+                <option value="iPhone 12">
+        </datalist>
+        <input type="submit" value="Купить" style="border-radius:40px; width:150px; height:80px; background-color:lightgreen;" />
+    </form>
+    <button id="getInfo">Корзина</button>
+    <div id="info"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Использование cookies</title>
+
+    <script>
+        window.addEventListener("load", function() {
+
+            let savedColor = findCookieValue("page-color");
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+            }
+            // Cookie не могут содержать точку с запятой, запятые или символы разделители. Перед сохранением значение в cookie желательно вызвать
+            // функцию encodeURIComponent() при чтении значения надо вызвать decodeURIComponent()
+            // записанный таким способом cookie сохраняются в текущем сеансе браузера но удаляются после его закрытия.
+
+            document.getElementById("saveButton").addEventListener("click", function() {
+                let selectedColor = getCheckedRadioId("color")
+                document.cookie = "page-color=" + encodeURIComponent(selectedColor) + ";max-age=" + (60 * 60);
+                document.body.style.backgroundColor = selectedColor;
+            });
+
+            function getCheckedRadioId(name) {
+                let elements = document.getElementsByName(name);
+
+                for (let i = 0, len = elements.length; i < len; i++)
+                    if (elements[i].checked) return elements[i].value;
+            }
+
+            function findCookieValue(cookieName) {
+                let allcookies = document.cookie;
+                let pos = allcookies.indexOf(cookieName + "=");
+
+                // Если cookie с указанным именем найден, извлечь его значения.
+                if (pos != -1) {
+                    let start = pos + cookieName.length + 1;
+                    let end = allcookies.indexOf(";", start);
+
+                    if (end == -1) end = allcookies.length;
+
+                    let value = allcookies.substring(start, end);
+                    value = decodeURIComponent(value);
+                    return value;
+                }
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="color" value="#ffd800" /> Orange
+        <input type="radio" name="color" value="#5ade54" /> Green
+        <input id="saveButton" type="button" value="Сохранить" />
+    </form>
+</body>
+
+</html>

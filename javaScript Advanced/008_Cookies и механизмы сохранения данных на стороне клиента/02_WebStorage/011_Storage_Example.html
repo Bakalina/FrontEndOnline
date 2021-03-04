@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Использование localStorage</title>
+
+    <script>
+        window.addEventListener("load", function() {
+
+            if (window.localStorage.pageColor) {
+                document.body.style.backgroundColor = window.localStorage.pageColor;
+            }
+
+            document.getElementById("saveButton").addEventListener("click", function() {
+                let selectedColor = getCheckedRadioId("color")
+                window.localStorage.pageColor = selectedColor;
+                document.body.style.backgroundColor = selectedColor;
+                let item = {
+                    name: "one",
+                    price: 100
+                }
+                window.localStorage.setItem("item", JSON.stringify(item));
+                let a = window.localStorage.getItem("item")
+                let b = JSON.parse(a);
+                document.body.append(b.name)
+            });
+
+            function getCheckedRadioId(name) {
+                let elements = document.getElementsByName(name);
+
+                for (let i = 0, len = elements.length; i < len; ++i)
+                    if (elements[i].checked) return elements[i].value;
+            }
+            document.getElementById("delButton").addEventListener("click", function() {
+
+                // window.localStorage.clear();
+                window.localStorage.removeItem("pageColor")
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="color" value="#ffd800" /> Orange
+        <input type="radio" name="color" value="#5ade54" /> Green
+        <input id="delButton" type="button" value="Удалить" />
+        <input id="saveButton" type="button" value="Сохранить" />
+    </form>
+</body>
+
+</html>
