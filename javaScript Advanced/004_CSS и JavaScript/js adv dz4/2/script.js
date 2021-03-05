@@ -25,6 +25,7 @@ function passOnChahge() {
 
 function formOnChahge() {
 
+
     let invalid = false;
 
     for (let i = 0; i < form.elements.length; ++i) {
@@ -35,9 +36,4 @@ function formOnChahge() {
         }
     }
 
-
-    if (invalid) {
-        alert("Вы не заполнили поля логин и пароль!");
-        return false;
-    }
 }
