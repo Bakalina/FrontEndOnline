@@ -17,63 +17,55 @@
 
 <body>
     <p>Угадай число от 0 до 100</p>
-    <label for="guessField">Введите число: </label><input type="text" id="guessField" class="guessField">
-    <input type="submit" value="Ответ" class="guessSubmit">
-    <p class="guesses"></p>
-    <p class="lastResult"></p>
-    <p class="lowOrHi"></p>
-
-
-
-
-
+    <label for="question">Введите число: </label><input type="text" id="question" class="question">
+    <input type="submit" value="Ответ" class="questionSubmit">
+    <p class="story"></p>
+    <p class="result"></p>
+    <p class="hint"></p>
 
 
     <script>
         let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-        let guesses = document.querySelector('.guesses');
-        let lastResult = document.querySelector('.lastResult');
-        let lowOrHi = document.querySelector('.lowOrHi');
+        let story = document.querySelector('.story');
+        let result = document.querySelector('.result');
+        let hint = document.querySelector('.hint');
 
-        let guessSubmit = document.querySelector('.guessSubmit');
-        let guessField = document.querySelector('.guessField');
+        let questionSubmit = document.querySelector('.questionSubmit');
+        let question = document.querySelector('.question');
 
-        let guessCount = 1;
-        let resetButton;
+        let questionCount = 1;
 
-        function checkGuess() {
-            let userGuess = Number(guessField.value);
-            if (guessCount === 1) {
-                guesses.textContent = 'Не верные ответы!: ';
+        function checkQuestion() {
+            let userResponse = Number(question.value);
+            if (questionCount === 1) {
+                story.textContent = 'Не верные ответы!: ';
             }
-            guesses.textContent += userGuess + ' ';
+            story.textContent += userResponse + ', ';
 
-            if (userGuess === randomNumber) {
-                lastResult.textContent = 'Поздравляем Вы выиграли!';
-                lastResult.style.backgroundColor = 'green';
-                lowOrHi.textContent = '';
-                setGameOver();
-            } else if (guessCount === 10) {
-                lastResult.textContent = 'Вы проиграли';
-                setGameOver();
+            if (userResponse === randomNumber) {
+                result.textContent = 'Поздравляем Вы выиграли!';
+                result.style.backgroundColor = 'green';
+                hint.textContent = '';
+            } else if (questionCount === 10) {
+                result.textContent = 'Вы проиграли';
+                result.style.backgroundColor = 'red';
             } else {
-                lastResult.textContent = 'Не верно!';
-                lastResult.style.backgroundColor = 'red';
-                if (userGuess < randomNumber) {
-                    lowOrHi.textContent = 'Загаданное значение меньше введенного вами!';
-                } else if (userGuess > randomNumber) {
-                    lowOrHi.textContent = 'Загаданное значение больше введенного вами!';
+                result.textContent = 'Не верно!';
+                result.style.backgroundColor = 'red';
+                if (userResponse < randomNumber) {
+                    hint.textContent = 'Загаданное значение меньше введенного вами!';
+                } else if (userResponse > randomNumber) {
+                    hint.textContent = 'Загаданное значение больше введенного вами!';
                 }
             }
 
-            guessCount++;
-            guessField.value = '';
-            guessField.focus();
+            questionCount++;
+            question.value = '';
+            question.focus();
         }
 
-        guessSubmit.addEventListener('click', checkGuess);
-
+        questionSubmit.addEventListener('click', checkQuestion);
     </script>
 </body>
 
