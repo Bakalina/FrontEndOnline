@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Задание 4
+        Разработайте страницу, разместите на ней четыре кнопки –«вверх», «вниз», «влево», «вправо». Поместите на
+    странице div с текстом. При нажатии на кнопки должна запускаться анимация, которая перемещает divна 100 pxв
+    соответствующем направлении. -->
+</head>
+
+<body>
+    <input type="button" id="btnTop" name="Top" value="Вниз">
+    <input type="button" id="btnLeft" name="Left" value="Вправо">
+    <input type="button" id="btnRight" name="Right" value="Влево">
+    <input type="button" id="btnBottom" name="Bottom" value="Вверх">
+    <div id="div" style="width: 200px; position: relative; margin: 20px;">Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. Sed beatae eligendi repudiandae facere pariatur voluptatibus
+        odio dolores eveniet mollitia non! Et sunt reprehenderit eos quas expedita vel perferendis itaque mollitia.
+    </div>
+
+    <script>
+        let div = document.getElementById("div");
+
+        btnTop.addEventListener("click", function (e) {
+            let run = div.offsetTop;
+            div.style.top = run + 100 + "px";
+        })
+        btnLeft.addEventListener("click", function (e) {
+            let run = div.offsetLeft;
+            div.style.left = run + 100 + "px";
+        })
+        btnRight.addEventListener("click", function (e) {
+            let run = div.offsetLeft;
+            div.style.left = run - 100 + "px";
+        })
+        btnBottom.addEventListener("click", function (e) {
+            let run = div.offsetTop;
+            div.style.top = run - 100 + "px";
+        })
+    </script>
+</body>
+
+</html>
