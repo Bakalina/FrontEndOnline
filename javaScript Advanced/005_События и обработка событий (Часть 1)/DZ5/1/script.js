@@ -25,7 +25,7 @@
 //             if (operandTwo != 0) {
 //                 result = operandOne / operandTwo;
 //             } else {
-//                 result = "Бесконечность"
+//                 result = "Бесконечность";
 //             }
 //             break;
 //     }
@@ -65,6 +65,16 @@ let multiply = document.getElementById("multiply");
 let toSplit = document.getElementById("toSplit");
 let operator;
 
+document.getElementById("operandOne").addEventListener("input", function (e) {
+    this.value = this.value.replace(/[^\d]/g, "");
+})
+
+document.getElementById("operandTwo").addEventListener("input", function (e) {
+    this.value = this.value.replace(/[^\d]/g, "");
+})
+
+
+
 function calc() {
     let operandOne = Number(document.getElementById("operandOne").value);
     let operandTwo = Number(document.getElementById("operandTwo").value);
@@ -84,7 +94,7 @@ function calc() {
             if (operandTwo != 0) {
                 result = operandOne / operandTwo;
             } else {
-                result = "Бесконечность"
+                result = "Бесконечность";
             }
             break;
     }
