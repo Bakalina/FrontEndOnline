@@ -1,0 +1,25 @@
+.operands input {
+    display: block;
+}
+
+p {
+    color: red;
+    font-size: 18px;
+}
+
+.operators input {
+    width: 30px;
+    background-color: lightblue;
+    border: 0;
+    margin-left: 10px;
+}
+
+.result p:last-child {
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border: 2px solid black;
+    color: green;
+
+}
+

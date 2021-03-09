@@ -13,12 +13,12 @@ function validate(elem, pattern) {
 }
 
 function nameOnChange() {
-    let pattern = /\w/;
+    let pattern = /\S/;
     validate(this, pattern);
 }
 
 function passOnChahge() {
-    let pattern = /\w/;
+    let pattern = /\S/;
     validate(this, pattern);
 }
 
@@ -30,10 +30,21 @@ function formOnChahge() {
 
     for (let i = 0; i < form.elements.length; ++i) {
         let e = form.elements[i];
-        if (e.type == "text" || e.type == "password" && e.onchange) {
+        if (e.type == "text" && e.onchange) {
             e.onchange();
             if (e.className == "invalid") invalid = true;
         }
+
+        if (e.type == "password" && e.onchange) {
+            e.onchange();
+            if (e.className == "invalid") invalid = true;
+        }
+
+        if (invalid) {
+            alert("Допущены ошибки при заполнении формы.");
+            return false; // отмена отправки формы.
+        }
+
     }
 
 }
