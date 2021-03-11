@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Разработайте страницу «текстовый редактор». На странице должно быть размешено поле ввода и кнопка
+    «Сохранить» (фактического сохранения данных из поля ввода делать не надо). Если пользователь пытается закрыть окно
+    браузера не «сохранив» данные в поле ввода, должно запускаться окно, которое потребует подтверждения операции
+    закрытия окна. -->
+    <style>
+        form input {
+            display: block;
+            width: 150px;
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <textarea name="text" id="text" cols="50" rows="20"></textarea>
+        <input type="submit" id="button" value="save">
+    </form>
+    <script>
+        let text = document.getElementById("text");
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", function () {
+            window.onbeforeunload = null;
+        })
+
+        text.addEventListener("keydown", function () {
+            window.onbeforeunload = function () {
+                return confirm('Вы хотите покинуть сайт?')
+            }
+        })
+    </script>
+</body>
+
+</html>
