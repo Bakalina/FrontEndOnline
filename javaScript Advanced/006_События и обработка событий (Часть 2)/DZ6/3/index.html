@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Сделайте кнопку с надписью «получить скидку». При наведение кнопка должна «убегать» от курсора не давая пользователю
+    нажать себя. -->
+    <style>
+        input {
+            position: relative;
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: lawngreen;
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="button" value="Получить скидку">
+
+    <script>
+        window.addEventListener("load", function () {
+            let button = document.getElementById("button");
+
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            button.addEventListener("mouseover", function () {
+                button.style.top = getRandomInt(0, 600) + "px";
+                button.style.left = getRandomInt(0, 600) + "px";
+            })
+
+        })
+    </script>
+</body>
+
+</html>
