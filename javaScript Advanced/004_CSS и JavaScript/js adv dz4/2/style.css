@@ -86,10 +86,3 @@ body {
     text-decoration: none;
 }
 
-input.invalid {
-    background-color: red;
-}
-
-input.valid {
-    background-color: Green;
-}

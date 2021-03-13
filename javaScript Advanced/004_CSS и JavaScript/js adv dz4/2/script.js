@@ -1,50 +1,28 @@
-window.addEventListener("load", init, false);
+window.addEventListener("load", function () {
 
-function init() {
-    login.onchange = nameOnChange;
-    pass.onchange = passOnChahge;
-    form.onchange = formOnChahge;
-}
+    document.getElementById("button").addEventListener("click", function () {
+        let login = document.getElementById("login");
+        let pass = document.getElementById("pass");
+        let info = document.getElementById("info");
 
-function validate(elem, pattern) {
-    let res = elem.value.search(pattern);
-    if (res == -1) elem.className = "invalid";
-    else elem.className = "valid";
-}
-
-function nameOnChange() {
-    let pattern = /\S/;
-    validate(this, pattern);
-}
-
-function passOnChahge() {
-    let pattern = /\S/;
-    validate(this, pattern);
-}
-
-
-function formOnChahge() {
-
-
-    let invalid = false;
-
-    for (let i = 0; i < form.elements.length; ++i) {
-        let e = form.elements[i];
-        if (e.type == "text" && e.onchange) {
-            e.onchange();
-            if (e.className == "invalid") invalid = true;
+        if (login.value == "admin") {
+            login.style.backgroundColor = "green";
+        } else {
+            login.style.backgroundColor = "red";
         }
 
-        if (e.type == "password" && e.onchange) {
-            e.onchange();
-            if (e.className == "invalid") invalid = true;
+        if (pass.value == 12345) {
+            pass.style.backgroundColor = "green";
+        } else {
+            pass.style.backgroundColor = "red";
         }
 
-        if (invalid) {
-            alert("Допущены ошибки при заполнении формы.");
-            return false; // отмена отправки формы.
+        if (login.value == "admin" && pass.value == 12345) {
+            info.innerHTML = "Вы авторизированы";
+            info.style.color = "green";
+        } else {
+            info.innerHTML = "Вы не заполнили поля логин и пароль";
+            info.style.color = "red";
         }
-
-    }
-
-}
+    })
+})
