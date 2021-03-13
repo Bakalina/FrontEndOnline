@@ -29,20 +29,16 @@
             document.addEventListener("keydown", function (e) {
                 if (e.ctrlKey && e.keyCode == 65) {
                     e.preventDefault();
-                    e.stopPropagation();
                     document.getElementById("text").innerHTML = "Выбрано все";
                 }
                 if (e.ctrlKey) {
                     if (e.shiftKey) {
                         if (e.keyCode == 83) {
-                            e.preventDefault();
-                            e.stopPropagation();
                             document.getElementById("text").innerHTML = "Сохранено все";
                         }
                     } else {
                         if (e.keyCode == 83) {
                             e.preventDefault();
-                            e.stopPropagation();
                             document.getElementById("text").innerHTML = "Сохранено";
                         }
                     }
