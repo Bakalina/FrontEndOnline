@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Разработайте страницу, которая будет выводить сообщение «сохранено» при нажатии на клавиши Ctrl+S, «выбрано все»
+    при нажатии на Ctrl+A и «сохранено все» при нажатии на комбинацию Ctrl+Shift+S -->
+    <style>
+        p {
+            color: red;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text"></p>
+
+
+
+    <script>
+        window.addEventListener("load", function (e) {
+
+            document.addEventListener("keydown", function (e) {
+                if (e.ctrlKey && e.keyCode == 65) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    document.getElementById("text").innerHTML = "Выбрано все";
+                }
+                if (e.ctrlKey) {
+                    if (e.shiftKey) {
+                        if (e.keyCode == 83) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            document.getElementById("text").innerHTML = "Сохранено все";
+                        }
+                    } else {
+                        if (e.keyCode == 83) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            document.getElementById("text").innerHTML = "Сохранено";
+                        }
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
