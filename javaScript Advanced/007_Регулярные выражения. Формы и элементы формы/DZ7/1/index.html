@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Разработайте страницу заказа пиццы. Требования к странице:Можно заказать три вида пиццы –маленькая, большая,
+    средняя.Можно самостоятельно выбрать ингредиенты к пицце –грибы, бекон, помидоры, сыр, оливки.На странице должна
+    вводиться информация о покупателе (его телефон и адрес доставки).
+        Подумайте, какие данные следует проверять на
+    странице, реализуйте эту проверку.Также реализуйте подсчет стоимости пиццы, при выборе размеров и ингредиентов,
+    автоматически должна пересчитываться сумма заказа. Цены на размер пиццы и отдельные ингредиенты выберите произвольно. -->
+    <style>
+        #button {
+            margin: 20px;
+        }
+
+        #summa {
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Pizza</h1>
+        <form name="form">
+            <select name="size" id="size">
+                <option value="small" id="sizeSmall">Маленькая</option>
+                <option value="average" selected id="sizeAverage">Средняя</option>
+                <option value="big" id="sizeBig">Большая</option>
+            </select>
+            <ul>
+                <li><input value="10" type="checkbox"> грибы - 10 грн.</li>
+                <li><input value="20" type="checkbox"> бекон - 20 грн.</li>
+                <li><input value="5" type="checkbox"> помидоры - 5 грн.</li>
+                <li><input value="30" type="checkbox"> сыр - 30 грн.</li>
+                <li><input value="10" type="checkbox"> оливки - 10 грн.</li>
+            </ul>
+            <h3>Сумма заказа:</h3>
+            <p id="summa"></p>
+            <p>Контакты клиента:</p>
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone">
+            <label for="address">Адрес:</label>
+            <input type="text" id="address">
+            <div>
+                <input type="button" value="Заказать" id="button">
+            </div>
+        </form>
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            let sizeSmall = document.getElementById("sizeSmall");
+            let sizeAverage = document.getElementById("sizeAverage");
+            let sizeBig = document.getElementById("sizeBig");
+            let size = document.getElementById("size");
+
+
+
+            let sizeSelect = form.size;
+            sizeSelect.addEventListener("change", function () {
+                let summa = document.getElementById("summa");
+                let selectedOption = sizeSelect.option[sizeSelect.selectedIndex];
+                summa.textContent = selectedOption.value;
+            })
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
