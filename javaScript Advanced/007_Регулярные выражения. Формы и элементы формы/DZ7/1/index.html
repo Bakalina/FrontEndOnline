@@ -36,15 +36,15 @@
                 <option value="150" id="sizeAverage">Средняя</option>
                 <option value="200" id="sizeBig">Большая</option>
             </select>
-            <ul class="ingredients">
-                <li><input value="10" type="checkbox"> грибы - 10 грн.</li>
-                <li><input value="20" type="checkbox"> бекон - 20 грн.</li>
-                <li><input value="5" type="checkbox"> помидоры - 5 грн.</li>
-                <li><input value="30" type="checkbox"> сыр - 30 грн.</li>
-                <li><input value="10" type="checkbox"> оливки - 10 грн.</li>
+            <ul id="checkBox">
+                <li><input name="ingredients" value="10" type="checkbox"> грибы - 10 грн.</li>
+                <li><input name="ingredients" value="20" type="checkbox"> бекон - 20 грн.</li>
+                <li><input name="ingredients" value="5" type="checkbox"> помидоры - 5 грн.</li>
+                <li><input name="ingredients" value="30" type="checkbox"> сыр - 30 грн.</li>
+                <li><input name="ingredients" value="10" type="checkbox"> оливки - 10 грн.</li>
             </ul>
             <h3>Сумма заказа:</h3>
-            <input id="summa" value="">
+            <input id="summa" value="0" type="number">
             <p>Контакты клиента:</p>
             <label for="phone">Телефон:</label>
             <input type="text" id="phone">
@@ -57,18 +57,31 @@
     </div>
     <script>
         window.addEventListener("load", function () {
-            
+
             let sizeSelect = document.getElementById("size");
 
-            sizeSelect.addEventListener("change", function (e) {
-                let summa = Number(document.getElementById("summa"));
-                summa = e.target.value;
-                summa += "100";
-                console.log(summa)
+            
 
+            sizeSelect.addEventListener("change", function (e) {
+                let summa = document.getElementById("summa");
+                let x = 0;
+                x = e.target.value * 1;
+                summa.value = x;
             })
 
+            document.getElementById("checkBox").addEventListener("click", function(){
 
+                let form = document.forms["form"];
+                let counter = 0;
+                let summa = document.getElementById("summa");
+                for (let i = 0; i < form.ingredients.length; i++) {
+                    if (form.ingredients[i].checked) {
+                        counter += form.ingredients[i].value * 1;
+                        summa.value += counter;
+                    }
+                }
+
+            })
 
         })
     </script>
