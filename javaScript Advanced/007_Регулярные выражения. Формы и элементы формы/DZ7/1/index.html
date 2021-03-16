@@ -18,7 +18,7 @@
         }
 
         #summa {
-            width: 200px;
+            width: 100px;
             height: 20px;
             text-align: center;
             border: 2px solid green;
@@ -30,21 +30,24 @@
     <div>
         <h1>Pizza</h1>
         <form name="form">
-            <select name="size" id="size">
-                <option value="0">Выбери размер</option>
-                <option value="100" id="sizeSmall">Маленькая</option>
-                <option value="150" id="sizeAverage">Средняя</option>
-                <option value="200" id="sizeBig">Большая</option>
-            </select>
-            <ul id="checkBox">
-                <li><input name="ingredients" value="10" type="checkbox"> грибы - 10 грн.</li>
-                <li><input name="ingredients" value="20" type="checkbox"> бекон - 20 грн.</li>
-                <li><input name="ingredients" value="5" type="checkbox"> помидоры - 5 грн.</li>
-                <li><input name="ingredients" value="30" type="checkbox"> сыр - 30 грн.</li>
-                <li><input name="ingredients" value="10" type="checkbox"> оливки - 10 грн.</li>
-            </ul>
+            <div id="checkBox">
+                <h3>База</h3>
+                <ul>
+                    <li><input name="ingredients" value="100" type="checkbox"> Маленькая - 100 грн.</li>
+                    <li><input name="ingredients" value="150" type="checkbox"> Средняя - 150 грн.</li>
+                    <li><input name="ingredients" value="200" type="checkbox"> Большая - 200 грн.</li>
+                </ul>
+                <h3>Добавки</h3>
+                <ul>
+                    <li><input name="ingredients" value="10" type="checkbox"> грибы - 10 грн.</li>
+                    <li><input name="ingredients" value="20" type="checkbox"> бекон - 20 грн.</li>
+                    <li><input name="ingredients" value="5" type="checkbox"> помидоры - 5 грн.</li>
+                    <li><input name="ingredients" value="30" type="checkbox"> сыр - 30 грн.</li>
+                    <li><input name="ingredients" value="10" type="checkbox"> оливки - 10 грн.</li>
+                </ul>
+            </div>
             <h3>Сумма заказа:</h3>
-            <input id="summa" value="0" type="number">
+            <p id="summa"></p>
             <p>Контакты клиента:</p>
             <label for="phone">Телефон:</label>
             <input type="text" id="phone">
@@ -58,31 +61,19 @@
     <script>
         window.addEventListener("load", function () {
 
-            let sizeSelect = document.getElementById("size");
-
-            
-
-            sizeSelect.addEventListener("change", function (e) {
-                let summa = document.getElementById("summa");
-                let x = 0;
-                x = e.target.value * 1;
-                summa.value = x;
-            })
-
-            document.getElementById("checkBox").addEventListener("click", function(){
-
+            document.getElementById("checkBox").addEventListener("click", function () {
                 let form = document.forms["form"];
                 let counter = 0;
                 let summa = document.getElementById("summa");
                 for (let i = 0; i < form.ingredients.length; i++) {
                     if (form.ingredients[i].checked) {
                         counter += form.ingredients[i].value * 1;
-                        summa.value += counter;
+                    } else {
+                        counter - form.ingredients[i].value * 1
                     }
+                    summa.innerHTML = counter + " грн.";
                 }
-
             })
-
         })
     </script>
 </body>
