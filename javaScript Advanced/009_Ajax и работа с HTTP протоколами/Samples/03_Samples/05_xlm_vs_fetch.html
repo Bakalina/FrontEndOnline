@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let obj;
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a')
+        xhr.send();
+        xhr.onreadystatechange = function(e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                obj = JSON.parse(xhr.response);
+                console.log(obj);
+            }
+        }
+
+        fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=e530dbf87d3f35fe1c14ace5c962084a')
+            .then(function(data) {
+                return data.json()
+            })
+            .then(function(data) {
+                console.log(data.results)
+            })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Имя пользователя: <span id="output"></span></p>
+    <p>Email пользователя: <span id="output1"></span></p>
+    <script>
+        //Promise – это специальный объект, предоставляющий удобный способ организации асинхронного кода, который содержит 
+        //своё состояние.
+        //then() - навешивает обработчики во внешний код на успешный результат или ошибку.По завершении процесса – данный 
+        //метод переводит promise в состояние fulfilled(с результатом) или rejected(с ошибкой).
+        // При этом автоматически вызываются соответствующие обработчики во внешнем коде.
+
+
+        //     promise.then().then().then() ……catch ()
+
+
+        //Обработчик catch (onRejected) - получает ошибку и должен обработать её. 
+
+
+
+        let url = 'https://jsonplaceholder.typicode.com/users';
+        let options = {
+                method: 'GET',
+                //headers,
+                //body, // Тело запроса
+                //mode, // в каком режиме кросс-доменности предполагается делать запрос.
+                //credentials, //пересылать ли куки и заголовки авторизации вместе с запросом.
+                //cache, //как кешировать запрос.
+            }
+            // При вызове fetch возвращает промис, который, когда получен ответ, выполняет коллбэки
+            // с объектом Response или с ошибкой, если запрос не удался.
+        let req = fetch(url, options);
+
+        req.then(function(response) {
+                return response.json()
+            }) // Возвращает Promise
+            .then(function(data) {
+                console.log(data);
+                document.getElementById("output").innerHTML = data[0].name;
+                document.getElementById("output1").innerHTML = data[0].email
+            })
+            .catch(function(err) {
+                console.error(err)
+            });
+    </script>
+
+</body>
+
+</html>
