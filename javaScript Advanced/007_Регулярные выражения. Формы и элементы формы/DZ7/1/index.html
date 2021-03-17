@@ -33,9 +33,9 @@
             <div id="checkBox">
                 <h3>База</h3>
                 <ul>
-                    <li><input name="ingredients" value="100" type="checkbox"> Маленькая - 100 грн.</li>
-                    <li><input name="ingredients" value="150" type="checkbox"> Средняя - 150 грн.</li>
-                    <li><input name="ingredients" value="200" type="checkbox"> Большая - 200 грн.</li>
+                    <li><input name="ingredients" value="100" type="radio"> Маленькая - 100 грн.</li>
+                    <li><input name="ingredients" value="150" type="radio" checked> Средняя - 150 грн.</li>
+                    <li><input name="ingredients" value="200" type="radio"> Большая - 200 грн.</li>
                 </ul>
                 <h3>Добавки</h3>
                 <ul>
@@ -50,30 +50,28 @@
             <p id="summa"></p>
             <p>Контакты клиента:</p>
             <label for="phone">Телефон:</label>
-            <input type="text" id="phone">
+            <input type="text" id="phone" required pattern="\d{3}-\d{3}-\d{2}-\d{2}"
+                title="Формат телефона 000-000-00-00">
             <label for="address">Адрес:</label>
-            <input type="text" id="address">
+            <input type="text" id="address" required>
             <div>
-                <input type="button" value="Заказать" id="button">
+                <input type="submit" value="Заказать" id="button">
             </div>
         </form>
     </div>
     <script>
-        window.addEventListener("load", function () {
-
-            document.getElementById("checkBox").addEventListener("click", function () {
-                let form = document.forms["form"];
-                let counter = 0;
-                let summa = document.getElementById("summa");
-                for (let i = 0; i < form.ingredients.length; i++) {
-                    if (form.ingredients[i].checked) {
-                        counter += form.ingredients[i].value * 1;
-                    } else {
-                        counter - form.ingredients[i].value * 1
-                    }
-                    summa.innerHTML = counter + " грн.";
+        document.getElementById("checkBox").addEventListener("click", function () {
+            let form = document.forms["form"];
+            let counter = 0;
+            let summa = document.getElementById("summa");
+            for (let i = 0; i < form.ingredients.length; i++) {
+                if (form.ingredients[i].checked) {
+                    counter += form.ingredients[i].value * 1;
+                } else {
+                    counter - form.ingredients[i].value * 1;
                 }
-            })
+                summa.innerHTML = counter + " грн.";
+            }
         })
     </script>
 </body>
