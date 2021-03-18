@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Создайте страницу, которую пользователь сможет персонализировать. На странице должен находиться выпадающий список с
+    названиями цветов и поле ввода, в которое можно будет ввести только целочисленное значение. При нажатии на кнопку
+    сохранить, цвет выбранный в выпадающем списке должен быть присвоен фону страницы, а целочисленное значение из поля
+    ввода, должно использоваться для изменения размера шрифта на странице. Выбранные настройки должны сохраниться в
+    localStorage и при повторном заходе пользователя на страницу, настройки должны восстановиться. -->
+    <style>
+        body {
+            background-color: teal;
+        }
+
+        p {
+            width: 30vw;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <select class="bgColor">
+            <option value="" selected></option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select>
+        <input class="fontSize" type="number" pattern="\d{2}" title="Цифры от 0 до 99">
+        <input class="button" type="button" value="Сохранить">
+    </form>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A reprehenderit deserunt, nulla suscipit voluptates
+        pariatur corrupti consequatur labore exercitationem et! Voluptas laborum libero magni, dolore velit quidem
+        distinctio ea porro.</p>
+
+    <script>
+        let bgColor = document.querySelector('.bgColor');
+        let body = document.querySelector('body');
+        let fontSize = document.querySelector('.fontSize');
+
+        bgColor.onchange = function () {
+
+            if (bgColor.value == "Red") {
+                body.style.backgroundColor = "red";
+            }
+            if (bgColor.value == "Green") {
+                body.style.backgroundColor = "green";
+            }
+            if (bgColor.value == "Blue") {
+                body.style.backgroundColor = "blue";
+            }
+        }
+
+        fontSize.oninput = function () {
+            body.style.fontSize = fontSize.value + "px";
+        }
+
+        window.addEventListener("load", function(){
+
+            if (window.localStorage.bgColor) {
+                document.body.style.backgroundColor = window.localStorage.bgColor;
+            }
+            if (window.localStorage.fontSize) {
+                document.body.style.fontSize = window.localStorage.fontSize + "px";
+            }
+
+
+            document.querySelector(".button").addEventListener("click", function() {
+                
+                window.localStorage.bgColor = bgColor.value;
+                document.body.style.backgroundColor = bgColor.value;
+                window.localStorage.fontSize = fontSize.value;
+                document.body.style.fontSize = fontSize.value;
+                let item = {id: Math.floor(Math.random() * 1000)}
+                window.localStorage.setItem("item", JSON.stringify(item));
+            })
+        })
+    </script>
+</body>
+
+</html>
