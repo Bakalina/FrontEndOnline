@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Создайте 2 страницы.Первая страница с описанием товараи кнопками «Купить», «Корзина». Принажатии на эту кнопку
+    информация (название товара,артикул и цена)сохраняетсяв localStorage.При нажатии на кнопку«Корзина»происходит
+    переход на вторую страницу гдевыводится информация о товаре,взятая,из localStorage -->
+    <style>
+        div {
+            width: 400px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: lawngreen;
+        }
+
+        button {
+            margin-bottom: 10px;
+            width: 100px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        p:last-of-type {
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        a {
+            display: block;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            margin:0 auto;
+            text-align: center;
+            line-height: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Ноутбук Apple MacBook Pro 16</h3>
+        <p>Экран 16" IPS (3072x1920), глянцевый / Intel Core i7-9750H (2.6 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / AMD
+            Radeon Pro 5300M, 4 ГБ / без ОД / Wi-Fi / Bluetooth / веб-камера / macOS Catalina / 2.0 кг / серый космос.
+        </p>
+        <p>82 999 грн.</p>
+        <button class="toBasket">В корзину</button>
+        <a href="basket.html">Корзина</a>
+    </div>
+
+    <script>
+      
+    </script>
+</body>
+
+</html>
