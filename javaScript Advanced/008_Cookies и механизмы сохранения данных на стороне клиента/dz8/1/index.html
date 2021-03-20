@@ -60,25 +60,25 @@
             body.style.fontSize = fontSize.value + "px";
         }
 
-        window.addEventListener("load", function(){
+        document.querySelector(".button").onclick = function () {
+            let style = {}
+            style.bgColor = bgColor.value;
+            style.fontSize = fontSize.value;
+            localStorage.setItem("style", JSON.stringify(style));
+        }
 
-            if (window.localStorage.bgColor) {
-                document.body.style.backgroundColor = window.localStorage.bgColor;
+        window.addEventListener("load", function () {
+
+            let keys, value;
+            keys = localStorage.getItem("style");
+            value = JSON.parse(keys)
+
+            if (value.bgColor) {
+                document.body.style.backgroundColor = value.bgColor;
             }
-            if (window.localStorage.fontSize) {
-                document.body.style.fontSize = window.localStorage.fontSize + "px";
+            if (value.fontSize) {
+                document.body.style.fontSize = value.fontSize + "px";
             }
-
-
-            document.querySelector(".button").addEventListener("click", function() {
-                
-                window.localStorage.bgColor = bgColor.value;
-                document.body.style.backgroundColor = bgColor.value;
-                window.localStorage.fontSize = fontSize.value;
-                document.body.style.fontSize = fontSize.value;
-                let item = {id: Math.floor(Math.random() * 1000)}
-                window.localStorage.setItem("item", JSON.stringify(item));
-            })
         })
     </script>
 </body>
