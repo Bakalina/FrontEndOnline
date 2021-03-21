@@ -32,7 +32,7 @@
             font-weight: bold;
         }
 
-        p:first-of-type{
+        p:first-of-type {
             color: rgb(240, 60, 60);
             font-size: 40px;
             font-weight: bold;
@@ -44,11 +44,24 @@
 <body>
     <div>
         <p>Корзина</p>
-        <h3></h3>
-        <p></p>
-        <p></p>
+        <h3 class="basketName"></h3>
+        <p class="basketSpecification"></p>
+        <p class="basketPrice"></p>
         <button>Купить</button>
     </div>
+    <script>
+        window.addEventListener('load', function () {
+            let keys, content;
+
+            keys = localStorage.getItem('product');
+            content = JSON.parse(keys);
+
+            document.querySelector('.basketName').textContent = content.name;
+            document.querySelector('.basketSpecification').textContent = content.specification;
+            document.querySelector('.basketPrice').textContent = content.price;
+
+        })
+    </script>
 </body>
 
 </html>

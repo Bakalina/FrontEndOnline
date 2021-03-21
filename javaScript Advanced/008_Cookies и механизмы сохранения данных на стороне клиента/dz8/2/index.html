@@ -51,17 +51,24 @@
 
 <body>
     <div>
-        <h3>Ноутбук Apple MacBook Pro 16</h3>
-        <p>Экран 16" IPS (3072x1920), глянцевый / Intel Core i7-9750H (2.6 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / AMD
+        <h3 class="product">Ноутбук Apple MacBook Pro 16</h3>
+        <p class="specification">Экран 16" IPS (3072x1920), глянцевый / Intel Core i7-9750H (2.6 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / AMD
             Radeon Pro 5300M, 4 ГБ / без ОД / Wi-Fi / Bluetooth / веб-камера / macOS Catalina / 2.0 кг / серый космос.
         </p>
-        <p>82 999 грн.</p>
+        <p class="price">82 999 грн.</p>
         <button class="toBasket">В корзину</button>
         <a href="basket.html">Корзина</a>
     </div>
 
     <script>
-      
+      document.querySelector('.toBasket').addEventListener('click', function(){
+          let product = {}
+          product.name = document.querySelector('.product').textContent;
+          product.specification = document.querySelector('.specification').textContent;
+          product.price = document.querySelector('.price').textContent;
+
+          localStorage.setItem('product', JSON.stringify(product))
+      })
     </script>
 </body>
 
