@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Разработайте страницу с двумя полями ввода и кнопкой. Пользователь должен вводить в поля вводов целочисленный
+    значения, а нажатие по кнопке должно приводить к асинхронному запросу на сервер. Запрашивать следует обработчик
+    CalcHandler.ashx, который находиться вместе с примерами в уроке номер 10, обработчик принимает два post параметра с
+    именами ‘a’ и ‘b'.Результат,который возвращает обработчик выведите на страницу. -->
+
+</head>
+
+<body>
+    <form>
+        <input class="operandOne" type="number">
+        <input class="operandTwo" type="number">
+        <button class="button" type="button">Отправить</button>
+    </form>
+
+    <p class="result"></p>
+
+
+    <script>
+        window.onload = function () {
+
+            document.querySelector('.button').onclick = function () {
+                let xhr = new XMLHttpRequest();
+
+                xhr.open("POST", "CalcHandler.ashx");
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.querySelector('.result').innerHTML ="Результат сложения = " + xhr.responseText;
+                    }
+                }
+
+                let operandOne = document.querySelector('.operandOne').value;
+                let operandTwo = document.querySelector('.operandTwo').value;
+
+                xhr.send("a=" + operandOne + "&b=" + operandTwo);
+            }
+        }
+    </script>
+</body>
+
+</html>
