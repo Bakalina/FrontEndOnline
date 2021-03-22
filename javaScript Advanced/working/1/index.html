@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 200px;
+            height: 30px;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>City</td>
+        </tr>
+    </table>
+    <script>
+        let obj;
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+        xhr.send();
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                obj = JSON.parse(xhr.response);
+                for (let i = 0; i < obj.length; i++) {
+                    let element = obj[i];
+                    let table = document.querySelector('.table');
+                    let newRow = table.insertRow(-1);
+                    let newCell1 = newRow.insertCell(0);
+                    let newCell2 = newRow.insertCell(1);
+                    let newCell3 = newRow.insertCell(2);
+                    let newCell4 = newRow.insertCell(3);
+                    newCell1.textContent = element.id;
+                    newCell2.textContent = element.name;
+                    newCell3.textContent = element.email;
+                    newCell4.textContent = element.address.city;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
