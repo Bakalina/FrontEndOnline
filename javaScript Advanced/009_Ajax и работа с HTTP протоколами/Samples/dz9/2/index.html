@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Выведите курс евро и канадского доллара по отношению к доллару США. В качестве сервера используйте данные из ресурса
+    https://openrates.io Задание выполните двумя способами, с использованием XMLHttpRequestи fetch. -->
+</head>
+
+<body>
+    <h2>Курс доллара США</h2>
+    <div>
+        <h4>XMLHttpRequest</h4>
+        <p class="euroXMLHttpRequest"></p>
+        <p class="cadXMLHttpRequest"></p>
+    </div>
+    <div>
+        <h4>fetch</h4>
+        <p class="euroFetch"></p>
+        <p class="cadFetch"></p>
+    </div>
+
+    <script>
+        let obj;
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.exchangeratesapi.io/latest?base=USD');
+        xhr.send();
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                obj = JSON.parse(xhr.response);
+
+                document.querySelector('.euroXMLHttpRequest').innerHTML = "Курс Евро = " + obj.rates.EUR;
+                document.querySelector('.cadXMLHttpRequest').innerHTML = "Курс Канадского доллара = " + obj.rates.CAD;
+            }
+        }
+        fetch('https://api.exchangeratesapi.io/latest?base=USD')
+            .then(function (data) {
+                return data.json()
+            })
+            .then(function (data) {
+                document.querySelector('.euroFetch').innerHTML = "Курс Евро = " + data.rates.EUR;
+                document.querySelector('.cadFetch').innerHTML = "Курс Канадского доллара = " + data.rates.CAD;
+            })
+    </script>
+</body>
+
+</html>

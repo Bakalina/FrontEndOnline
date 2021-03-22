@@ -12,6 +12,7 @@
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         // JSON.parse - преобразование в объект строки полученной с сервера.
                         let data = JSON.parse(xhr.responseText);
+                        console.log(data)
                         document.getElementById("output").innerHTML = "Имя - " + data.firstName + ", Фамилия - " + data.lastName;
                     }
                 }
