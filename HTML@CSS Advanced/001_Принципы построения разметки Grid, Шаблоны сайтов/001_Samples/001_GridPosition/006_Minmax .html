@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minmax function</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {
+            /*Grid разметка контейнера*/
+            display: grid;
+            /*При изменении размера -1 колонка будет ужиматься до 250px. По умолчанию -400px*/
+            grid-template-columns: minmax(250px, 400px) 1fr 1fr;
+            gap: 25px;
+            /*При изменении размера -1 строка будет ужиматься до 200px. По умолчанию -на всю ширину контента*/
+            grid-template-rows: minmax(200px, auto) 200px 200px;
+            background-color: lightgray;
+        }
+        
+        .grid div {
+            background-color: #1b67a8;
+            border: 1px solid #212941;
+            border-radius: 5px;
+            padding: 8px 15px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        .grid div:nth-child(odd) {
+            background-color: #1ac66c;
+        }
+        .grid div:nth-child(7){
+            overflow: hidden ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+
+        <div>item-1 Lorem.</div>
+        <div>item-2</div>
+        <div>item-3</div>
+        <div>item-4</div>
+        <div>item-5</div>
+        <div>item-6</div>
+        <div>item-7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse inventore, ex ducimus, sed incidunt maxime aspernatur placeat dolore vel sapiente aperiam dolorum et cum labore, eaque ullam distinctio harum soluta. Veniam adipisci quibusdam
+            ab neque cumque doloribus laboriosam beatae libero? Maxime ad dolorem corrupti, cumque, adipisci blanditiis voluptas iste ullam dignissimos nulla provident cum eius, distinctio eveniet rerum excepturi ratione. Incidunt provident officia ab
+            fuga quaerat, esse beatae veritatis at asperiores debitis harum nemo suscipit ipsum! Repellendus explicabo quod voluptas sapiente impedit iusto, nobis veritatis neque architecto voluptatem quae ab. Error reprehenderit ab, tenetur ducimus inventore
+            quidem soluta quod natus porro numquam omnis illo illum repellat et ad corrupti iure! Libero recusandae laudantium in tempore labore magni ipsam sint esse! Earum eius eveniet ratione quam impedit sunt obcaecati atque magni, laboriosam officia
+            assumenda ipsam ipsa minima eligendi nulla, in doloremque fugiat enim temporibus quidem sint? Et ullam tempore soluta consequatur!</div>
+        <div>item-8</div>
+        <div>item-9</div>
+        <div>item-10</div>
+    </div>
+</body>
+
+</html>
