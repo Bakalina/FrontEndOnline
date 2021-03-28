@@ -6,7 +6,6 @@
 body {
     margin: 0 auto;
     max-width: 930px;
-    border: 1px solid black;
 }
 
 .logo {
@@ -16,7 +15,7 @@ body {
 
 .logo>h1 {
     color: #93d245;
-    font-size: 47px;
+    font-size: 70px;
     text-transform: uppercase;
     margin-right: 3px;
 }
@@ -33,6 +32,7 @@ body {
 
 .nav {
     display: flex;
+    justify-content: flex-end;
     margin-top: 15px;
 }
 
@@ -42,9 +42,61 @@ body {
     padding: 0 10px;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #95d14b;
     height: 30px;
     line-height: 30px;
     letter-spacing: 2px;
+}
+
+.article {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.text>h5 {
+    color: #9b9b9b;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.text>p {
+    color: #888888;
+    font-size: 15px;
+}
+
+.img>img {
+    display: block;
+}
+
+.img>p {
+    background-color: #95d14b;
+    line-height: 26px;
+    font-size: 20px;
+    color: white;
+    padding-left: 15px;
+}
+
+.news {
+    font-size: 30px;
+    color: #9b9b9b;
+    margin: 20px 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.content p {
+    font-size: 16px;
+    color: #9b9b9b;
+    margin-top: 10px;
+}
+
+.content p:first-of-type {
+    color: #888888;
+    font-size: 20px;
 }
