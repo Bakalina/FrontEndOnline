@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+}
+
+.header .container {
+    position: absolute;
+    top: 190px;
+    background: rgba(255, 255, 255, 0.753);
+}
+
+.header .container p {
+    width: 85%;
+}
+
+.header .container a {
+    display: block;
+    background-color: #8a0e10;
+    width: 80px;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.header img {
+    display: block;
+}
+
+.header span {
+    display: block;
+    height: 15px;
+    background: black;
+}
+
+
