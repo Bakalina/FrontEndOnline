@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Создайте страницу ТурФирмы. Основные элементы –header, footer, section, nav. В элементе section–минимум 4 блока с
+    ТОПовыми отелями. В блоке есть фото и информация про отель. Снизу под описанием –кнопка –«Посмотреть на карте». При
+    нажатии на кнопку –появляется карта с расположением данного отеля. -->
+
+</head>
+
+<body>
+    <div class="map">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.247727823564!2d32.0076088152828!3d36.54813938000127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dca27fd266a1c5%3A0x3787d93dac2339f!2sBlue%20Heaven%20Apart%20Hotel!5e0!3m2!1sru!2sua!4v1617091202770!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        <button class="mapClose">X</button>
+    </div>
+    <header>
+        <div class="container">
+            <a href="#">Best <span>tour</span> plan</a>
+            <form class="inputButton">
+                <input type="text" placeholder="Search Location"><button>Search</button>
+            </form>
+            <a href="#">Корзина<span>2</span></a>
+            <div class="profile">
+                <img src="image/Ellipse1.jpg" alt="Nathan">
+                <span>Nathan</span>
+                <i>Arrow down</i>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#">All Deals</a>
+            <a href="#">Hotels</a>
+            <a href="#">Activities</a>
+            <a href="#">Hotel day packages</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Events</a>
+            <a href="#">Rodrigues</a>
+        </div>
+    </nav>
+    <section class="tripCard">
+        <div class="container">
+            <h2></h2>
+            <div class="card">
+                <div class="tripCardBig">
+                    <div class="tripCardBigImg">
+                        <img src="image/Rectangle20.jpg" alt="Rectangle">
+                        <div class="tripCardFlashOffer">Flash Offer</div>
+                    </div>
+                    <div class="tripCardInfo tripCardButton">
+                        <div class="star">
+                            <i>Star</i>
+                            <i>Star</i>
+                            <i>Star</i>
+                            <i>Star</i>
+                            <i>Star</i>
+                        </div>
+                        <h5>Hotel Blue Haven</h5>
+                        <p>Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit.
+                            Ipsum
+                            est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur
+                            excepteur
+                            ipsum occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea
+                            ullamco do
+                        </p>
+                        <div class="tripCardPersonRoom">
+                            <p>1749 Wheeler Ridge Delaware</p>
+                            <p>2 x Guests</p>
+                            <p>1 x Room</p>
+                            <p>$ 10,500</p>
+                            <p>$ 8,500</p>
+                        </div>
+                        <button>Book Now</button>
+                        <button class="buttonBlueHaven">On the map</button>
+                    </div>
+                </div>
+                <div class="tripCardSmall">
+                    <div class="tripCardInfo tripCardButton">
+                        <img src="image/Rectangle19.jpg" alt="Rectangle">
+                        <div class="tripCardFlashOffer">Flash Offer</div>
+                        <h5>LUX* Belle Mare</h5>
+                        <div class="tripCardPersonRoom">
+                            <p>1749 Wheeler Ridge Delaware</p>
+                            <p>2 x Guests</p>
+                            <p>1 x Room</p>
+                            <p>$ 8,500</p>
+                            <p>$ 3,000</p>
+                        </div>
+                        <button>Book Now</button>
+                        <button class="buttonBelleMare">On the map</button>
+                    </div>
+                </div>
+                <div class="tripCardSmall">
+                    <div class="tripCardInfo tripCardButton">
+                        <img src="image/Rectangle18.jpg" alt="Rectangle">
+                        <div class="tripCardFlashOffer">Flash Offer</div>
+                        <h5>White Palace</h5>
+                        <div class="tripCardPersonRoom">
+                            <p>1749 Wheeler Ridge Delaware</p>
+                            <p>2 x Guests</p>
+                            <p>1 x Room</p>
+                            <p>$ 10,500</p>
+                            <p>$ 9,500</p>
+                        </div>
+                        <button>Book Now</button>
+                        <button class="WhitePalace">On the map</button>
+                    </div>
+                </div>
+                <div class="tripCardSmall">
+                    <div class="tripCardInfo tripCardButton">
+                        <img src="image/Rectangle17.jpg" alt="Rectangle">
+                        <div class="tripCardFlashOffer">Flash Offer</div>
+                        <h5>Luxury Place</h5>
+                        <div class="tripCardPersonRoom">
+                            <p>1749 Wheeler Ridge Delaware</p>
+                            <p>2 x Guests</p>
+                            <p>1 x Room</p>
+                            <p>$ 4,500</p>
+                            <p>$ 2,500</p>
+                        </div>
+                        <button>Book Now</button>
+                        <button class="buttonLuxuryPlace">On the map</button>
+                    </div>
+                </div>
+                <div class="tripCardSmall">
+                    <div class="tripCardInfo tripCardButton">
+                        <img src="image/Rectangle16.jpg" alt="Rectangle">
+                        <div class="tripCardFlashOffer">Flash Offer</div>
+                        <h5>Hotel Five Star</h5>
+                        <div class="tripCardPersonRoom">
+                            <p>1749 Wheeler Ridge Delaware</p>
+                            <p>2 x Guests</p>
+                            <p>1 x Room</p>
+                            <p>$ 6,500</p>
+                            <p>$ 3,500</p>
+                        </div>
+                        <button>Book Now</button>
+                        <button class="buttonFiveStar">On the map</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footerTop">
+                <div class="footerTopLogo">
+                    <a href="#">Best <span>tour</span> plan</a>
+                </div>
+                <div>
+                    <h5>ALL CATEGORIES</h5>
+                    <ul>
+                        <li><a href="#">All Deals</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Spa Packages</a></li>
+                        <li><a href="#">Hotel Day Packages</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="#">Fitness</a></li>
+                        <li><a href="#">Rodrigues</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>ADDITIONAL INFORMATION</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">How does it work?</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                        <li><a href="#">Deals.mu loyalty program</a></li>
+                        <li><a href="#">Promote your Business on BTP</a></li>
+                    </ul>
+                    <div class="footerToopSocial">
+                        <p>Social Network</p>
+                        <a href="#">facebook</a>
+                        <a href="#">youtube</a>
+                        <a href="#">instagram</a>
+                    </div>
+                </div>
+                <div>
+                    <h5>LEGAL INFORMATION</h5>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Cancellation policy</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerContact">
+                <div class="foterContactDetails">
+                    <h5>Contact Details</h5>
+                    <p>Feel free to contact us by phone, email or by our contact form</p>
+                    <a href="#">9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</a>
+                    <a href="tel:269-1500">Tel (business hours) : 269 1500</a>
+                    <a href="tel:52-56-61-38">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a>
+                    <a href="tel:52-56-61-38">Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a>
+                    <a href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
+                </div>
+                <form class="foterContactForm">
+                    <h5>Send us a message</h5>
+                    <input type="text" name="name" required placeholder="Your Full Name*">
+                    <input type="text" name="tel" required placeholder="Phone Number*">
+                    <textarea name="Message" placeholder="Message"></textarea>
+                    <input type="submit" value="Send">
+                    <span>* Required Fields</span>
+                </form>
+            </div>
+            <div class="footerBottom">
+                <a href="#">Disclaimer</a>
+                <a href="#">Conditions of use</a>
+                <a href="#">Cancellation policy</a>
+                <img src="image/image.jpg" alt="payment">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
