@@ -7,6 +7,6 @@ document.querySelector('.buttonBlueHaven').onclick = function() {
    
 }
 
-document.querySelector('.map').onclick = function() {
+document.querySelector('.mapClose').onclick = function() {
     document.querySelector('.map').style.visibility = 'hidden'
 }
