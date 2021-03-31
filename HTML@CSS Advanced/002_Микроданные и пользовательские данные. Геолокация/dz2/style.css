@@ -345,6 +345,13 @@ header .profile i {
     z-index: 999;
 }
 
+.map iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
 .mapClose {
     background: #EC1F46;
     position: absolute;
