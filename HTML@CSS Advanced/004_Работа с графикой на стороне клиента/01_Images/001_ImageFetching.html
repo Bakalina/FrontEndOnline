@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Работа с изображениями</title>
+    <script>
+        window.onload = function() {
+            let img1 = document.getElementById("logoImg"); // получение по id.
+            let img2 = document.images.logo; // получение по name (первый способ).
+            let img3 = document.images[0]; // получение по name (второй способ).
+            let img4 = document.logo; // если name уникальный для всего документа.
+
+            alert(img1 + ", " + img2 + ", " + img3 + ", " + img4);
+        }
+    </script>
+</head>
+
+<body>
+    <img id="logoImg" name="logo" src="images/logo.png" alt="CyberBionic Systematics" />
+</body>
+
+</html>
