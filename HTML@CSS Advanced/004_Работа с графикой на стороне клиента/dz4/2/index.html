@@ -23,26 +23,29 @@
 
 <body>
     <div class="img">
-        <img src="img/1.jpg" alt="Image" class="image">
-        <img src="img/2.jpg" alt="Image" class="image">
-        <img src="img/3.jpg" alt="Image" class="image">
-        <img src="img/4.jpg" alt="Image" class="image">
-        <img src="img/5.jpg" alt="Image" class="image">
+        <img src="img/1.jpg" alt="Image">
+        <img src="img/2.jpg" alt="Image">
+        <img src="img/3.jpg" alt="Image">
+        <img src="img/4.jpg" alt="Image">
+        <img src="img/5.jpg" alt="Image">
     </div>
 
     <script>
         let img = document.images;
         for (let i = 0; i < img.length; i++) {
             let element = img[i];
-            console.log(element)
 
             element.onmouseover = function () {
                 this.style.zIndex = 1;
+                this.style.boxShadow = '10px 10px 20px black';
+                this.style.transition = 'transform 1s';
                 this.style.transform = 'scale(1)';
             }
+
             element.onmouseout = function () {
                 this.style.zIndex = 0;
                 this.style.transform = 'scale(0.8)';
+                this.style.boxShadow = 'none';
             }
         }
     </script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Используя элемент SSVG, напишите модуль, с помощью которого на странице будет отображаться диаграмма в соответствии с данными переданными массивом в модуль. -->
+</head>
+
+<body>
+    <div class="containerDiagram"></div>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            let mas = new Array;
+            mas = [29, 6, 52, 79, 15, 31, 33, 15, 53, 95, 53, 58, 7, 22, 12, 86, 38, 33, 54, 46]
+            let dia = diagram(mas, 600, 300, 'blue');
+
+            document.querySelector('.containerDiagram').append(dia);
+
+        })
+    </script>
+</body>
+
+</html>
