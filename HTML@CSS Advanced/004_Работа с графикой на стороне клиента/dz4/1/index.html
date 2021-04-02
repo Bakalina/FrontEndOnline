@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Создайте страницу с тремя кнопками, при нажатии на каждую из кнопок должно меняться изображение,выводимое на странице. -->
+    <style>
+        body {
+            background-color: rgb(236, 230, 221);
+        }
+
+        .image {
+            width: min-content;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .button {
+            width: max-content;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 0 10px;
+            height: 30px;
+            background-color: burlywood;
+            border: 0;
+            border-radius: 15px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        button:focus {
+            outline: none;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+        <button class="button1">Картинка 1</button>
+        <button class="button2">Картинка 2</button>
+        <button class="button3">Картинка 3</button>
+    </div>
+    <div class="image">
+        <img id="img" src="img/0.jpg" alt="Image">
+    </div>
+
+    <script>
+        document.querySelector('.button1').onclick = function () {
+            document.getElementById('img').src = "img/1.jpg";
+        }
+
+        document.querySelector('.button2').onclick = function () {
+            document.getElementById('img').src = "img/2.jpg";
+        }
+
+        document.querySelector('.button3').onclick = function () {
+            document.getElementById('img').src = "img/3.jpg";
+        }
+    </script>
+</body>
+
+</html>
