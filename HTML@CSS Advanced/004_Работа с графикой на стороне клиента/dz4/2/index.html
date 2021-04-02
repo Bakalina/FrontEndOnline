@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Создайте страницу-галерею. На странице должен выводиться список картинок preview небольших размеров. При нажатии на
+    каждое изображение превью должно отображаться большое изображение. -->
+</head>
+<style>
+    .img {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        margin-top: 50px;
+    }
+
+    .img img {
+        transform: scale(0.8);
+    }
+</style>
+
+<body>
+    <div class="img">
+        <img src="img/1.jpg" alt="Image" class="image">
+        <img src="img/2.jpg" alt="Image" class="image">
+        <img src="img/3.jpg" alt="Image" class="image">
+        <img src="img/4.jpg" alt="Image" class="image">
+        <img src="img/5.jpg" alt="Image" class="image">
+    </div>
+
+    <script>
+        let img = document.images;
+        for (let i = 0; i < img.length; i++) {
+            let element = img[i];
+            console.log(element)
+
+            element.onmouseover = function () {
+                this.style.zIndex = 1;
+                this.style.transform = 'scale(1)';
+            }
+            element.onmouseout = function () {
+                this.style.zIndex = 0;
+                this.style.transform = 'scale(0.8)';
+            }
+        }
+    </script>
+</body>
+
+</html>
