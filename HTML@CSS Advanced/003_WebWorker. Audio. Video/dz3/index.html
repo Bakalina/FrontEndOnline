@@ -12,6 +12,49 @@
 </head>
 
 <body>
+    <form action="">
+        <label for="number1"></label>
+        <input type="text" id="number1">
+        <label for="number2"></label>
+        <input type="text" id="number2">
+        <button class="minus">-</button>
+        <button class="multiply">x</button>
+        <button class="toSplit">/</button>
+    </form>
+    <button class="plus">+</button>
+
+
+    <p class="result"></p>
+
+    <script>
+        let number1 = document.getElementById('number1');
+        let number2 = document.getElementById('number2');
+        let plus = document.querySelector('.plus')
+        let minus = document.querySelector('.minus')
+        let multiply = document.querySelector('.multiply')
+        let toSplit = document.querySelector('.toSplit')
+        let result = document.querySelector('.result');
+
+
+        plus.onclick = function () {
+
+            let worker = new Worker('worker1.js');
+
+
+            number1.onchange = function () {
+                worker.postMessage([number1.value, number2.value]);
+                console.log(number1)
+            }
+            number2.onchange = function () {
+                worker.postMessage([number1.value, number2.value]);
+                console.log(number2)
+            }
+
+            worker.onmessage = function (e) {
+                result.textContent = e.data;
+            }
+        }
+    </script>
 
 </body>
 
