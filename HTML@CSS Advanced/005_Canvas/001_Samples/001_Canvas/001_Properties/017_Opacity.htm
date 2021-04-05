@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Opacity</title>
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            let canvas = document.getElementById('canvas');
+            let context = canvas.getContext("2d")
+            context.fillStyle = 'red';
+            //Задаем альфа-канал для элемента. Значения от 0 до 1.
+            context.globalAlpha = 1;
+            context.fillRect(50, 50, 50, 50);
+            context.globalAlpha = 0.5;
+            context.fillStyle = 'orange';
+            context.fillRect(25, 25, 50, 50);          
+        }
+    </script>
+    <style>
+        canvas {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" height="300" width="300">
+        Ваш браузер не поддерживает элемент <i>Canvas</i>
+    </canvas>
+</body>
+</html>
