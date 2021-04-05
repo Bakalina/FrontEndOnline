@@ -9,6 +9,12 @@
     <!-- Создайте сайт, где будет возможность производить сложный расчет данных из калькулятора. Добавьте 2 поля ввода и 4
     кнопки для математических операций. После нажатия на каждую из кнопок –должен создаваться свой Worker и при
     обращении к потоку –в нем будет производиться вычисления. Используйте 4 файла Worker.js с различным функционалом. -->
+    <style>
+        button {
+            width: 86px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,12 +23,11 @@
         <input type="text" id="number1">
         <label for="number2"></label>
         <input type="text" id="number2">
-        <button class="minus">-</button>
-        <button class="multiply">x</button>
-        <button class="toSplit">/</button>
     </form>
     <button class="plus">+</button>
-
+    <button class="minus">-</button>
+    <button class="multiply">x</button>
+    <button class="toSplit">/</button>
 
     <p class="result"></p>
 
@@ -34,21 +39,40 @@
         let multiply = document.querySelector('.multiply')
         let toSplit = document.querySelector('.toSplit')
         let result = document.querySelector('.result');
-
-
         plus.onclick = function () {
 
             let worker = new Worker('worker1.js');
+            worker.postMessage([+(number1.value), +(number2.value)]);
 
+            worker.onmessage = function (e) {
+                result.textContent = e.data;
+            }
+        }
 
-            number1.onchange = function () {
-                worker.postMessage([number1.value, number2.value]);
-                console.log(number1)
+        minus.onclick = function () {
+
+            let worker = new Worker('worker2.js');
+            worker.postMessage([number1.value, number2.value]);
+
+            worker.onmessage = function (e) {
+                result.textContent = e.data;
             }
-            number2.onchange = function () {
-                worker.postMessage([number1.value, number2.value]);
-                console.log(number2)
+        }
+
+        multiply.onclick = function () {
+
+            let worker = new Worker('worker3.js');
+            worker.postMessage([number1.value, number2.value]);
+
+            worker.onmessage = function (e) {
+                result.textContent = e.data;
             }
+        }
+
+        toSplit.onclick = function () {
+
+            let worker = new Worker('worker4.js');
+            worker.postMessage([number1.value, number2.value]);
 
             worker.onmessage = function (e) {
                 result.textContent = e.data;
