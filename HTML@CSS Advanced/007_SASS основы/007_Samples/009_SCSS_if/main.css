@@ -1,0 +1,28 @@
+@charset "UTF-8";
+div {
+  width: 105px;
+  height: 70px;
+  border: 2.33333px solid black;
+  float: left;
+  margin-left: 14px;
+  margin-top: 17.5px; }
+
+.item1 {
+  background-color: #ffff13;
+  color: #7b4040; }
+
+.item2 {
+  background-color: #ffa7ff;
+  color: #ff4eff; }
+
+.item3 {
+  background-color: #ffd4c5;
+  color: #ffff88; }
+
+.item4 {
+  background-color: #ffffc2;
+  color: #4d5203; }
+
+.item5 {
+  /*Задаем условие для вычисления*/
+  background-color: #e7f708; }

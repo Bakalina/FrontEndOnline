@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*Цвета HEX-формата -складываются по трем основным:
+#(44-red, 02-green, 22-blue) + #(11-red, 15-green, 08-blue)=#55172a*/
+div {
+  width: 150px;
+  height: 100px;
+  border: 3.33333px solid black;
+  float: left;
+  margin-left: 20px;
+  margin-top: 25px; }
+
+.item1 {
+  /*transparentize - функция, задающая альфа канал выбранному элементу. И есть еще функция fade-out, которая 
+    аналогична функции transparentize*/
+  background-color: rgba(255, 255, 18, 0.6);
+  color: #55172a; }
+
+.item2 {
+  background-color: #ef549d;
+  color: #ff4eff; }
+
+.item3 {
+  background-color: #ffd2c5;
+  color: #ffff87; }
+
+.item4 {
+  background-color: white;
+  color: #e6f707; }
+
+.item5 {
+  background-color: #82fff4; }

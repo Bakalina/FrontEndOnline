@@ -1,0 +1,68 @@
+﻿$size: 100px;
+$colorG: green;
+$colorR: red;
+/*Селекторы шаблоны %name*/
+%base-class {
+    min-height: $size/20;
+    width: $size*2;
+    position: relative;
+    top: $size/2;
+    left: $size/2;
+    color: darken($colorG, 10%);
+}
+
+@import 'mixin';
+
+.item {
+    width: $size*6;
+    height: $size*6;
+    background-color: lighten($colorR, 40%);
+    margin: $size/2 auto;
+    border: $size/50 solid $colorG;
+
+    h2 {
+        text-align: right;
+        color: lighten($colorG, 50%);
+    }
+
+    .back {
+        color: hsl(270, 69%, 44%);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h5 {
+        /*Подключаем шаблон-класс.*/
+        @extend %base-class;
+    }
+
+    .container {
+        width: $size*4;
+        height: $size*3;
+        border: $size/33 solid $colorG;
+        @include border(20px);
+        margin: $size/5 auto;
+
+        h1 {
+            text-align: center;
+            color: $colorR;
+            opacity: 0.5;
+        }
+
+        .lead {
+            //Расширяем свойства для элемента с классом .lead - добавляя ему свойства от элемента с классом back;
+            @extend .back;
+            /*Включение mixin в элемент*/
+            @include whiteSpace(pre-wrap);
+            font-size: $size/10;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a {
+            /*Использование mixin и переменной*/
+            text-decoration: none;
+            color: lighten($colorR, 30%);
+            @include border($size/4);
+        }
+    }
+}
