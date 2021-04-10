@@ -1,0 +1,10 @@
+div {
+  border: 6px solid #05bdeb;
+  color: black;
+  width: 260px; }
+
+p {
+  padding: 13px;
+  margin: 13px;
+  border-color: #05bdeb;
+  background-color: #0fcbfa; }
