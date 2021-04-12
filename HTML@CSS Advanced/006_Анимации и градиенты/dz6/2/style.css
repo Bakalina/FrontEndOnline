@@ -22,6 +22,7 @@ body {
     height: 10px;
     background-color: crimson;
     border-radius: 50%;
+    animation: animation 1s infinite;
 }
 
 .berlin {
@@ -46,4 +47,55 @@ body {
     position: absolute;
     top: 560px;
     left: 597px;
+}
+
+@keyframes animation {
+
+    from,
+    to {
+        width: 10px;
+        height: 10px;
+    }
+
+    20% {
+        width: 11px;
+        height: 11px;
+    }
+
+    30% {
+        width: 12px;
+        height: 12px;
+    }
+
+    40% {
+        width: 13px;
+        height: 13px;
+    }
+
+    50% {
+        width: 14px;
+        height: 14px;
+    }
+
+    60% {
+        width: 13px;
+        height: 13px;
+    }
+
+    70% {
+        width: 12px;
+        height: 12px;
+    }
+
+    80% {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+.berlin:hover,
+.london:hover,
+.paris:hover,
+.roma:hover {
+    animation-play-state: paused;
 }
