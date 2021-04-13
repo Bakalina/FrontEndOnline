@@ -107,14 +107,14 @@ body {
     text-decoration: none;
     text-align: center;
     color: black;
-    margin: 15px 0 0 -30px;
+    margin: 15px 0 0 -50px;
     padding: 5px 10px;
-    border: 1px solid black;
     border-radius: 15px;
     background-color: rgba(243, 239, 237, 0.452);
     position: absolute;
     visibility: hidden;
     transition-duration: 1s;
+    white-space: nowrap;
 }
 
 .berlin:hover>.berlinTickets,
@@ -122,4 +122,5 @@ body {
 .paris:hover>.berlinTickets,
 .roma:hover>.berlinTickets {
     visibility: visible;
+    color: red;
 }
