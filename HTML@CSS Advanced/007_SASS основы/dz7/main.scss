@@ -1,1 +1,38 @@
-@import 'header'
+@import 'header';
+@import 'aside';
+@import 'main';
+@import 'footer';
+
+
+* {
+    margin: 0;
+    background-color: rgb(197, 197, 197);
+}
+
+
+body {
+    width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer';
+    grid-template-columns: 80% 20%;
+    gap: 10px;
+
+    .header {
+        grid-area: header;
+    }
+    .aside {
+        grid-area: aside;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+    
+}
+

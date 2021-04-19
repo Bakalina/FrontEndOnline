@@ -1,1 +1,9 @@
-{"version":3,"sources":["main.css"],"names":[],"mappings":";AACA,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,qBAAqB;EAC7B,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM,GAAG;;AAEvB,kIAAkI;AAClI,2GAA2G;AAC3G,MAAM,CAAC;EACL,KAAK,EAAE,IAAI,GAAG;;AAEhB,MAAM,CAAC;EACL,KAAK,EAAE,KAAK,GAAG;;AAEjB,MAAM,CAAC;EACL,KAAK,EAAE,KAAK,GAAG;;AAEjB,MAAM,CAAC;EACL,KAAK,EAAE,KAAK,GAAG;;AAEjB,MAAM,CAAC;EACL,KAAK,EAAE,KAAK,GAAG","file":"main.css","sourcesContent":["@charset \"UTF-8\";\ndiv {\n  width: 75px;\n  height: 50px;\n  border: 1.66667px solid black;\n  float: left;\n  margin-left: 10px;\n  margin-top: 12.5px; }\n\n/*Директива @while принимает выражение SassScript и циклично выводит вложенные в неё стили, пока выражение вычисляется как true.*/\n/*Пока переменная i -меньше 6, добавляем класс со свойствами стилей, после чего увеличиваем значение на 1*/\n.item1 {\n  width: 50px; }\n\n.item2 {\n  width: 100px; }\n\n.item3 {\n  width: 150px; }\n\n.item4 {\n  width: 200px; }\n\n.item5 {\n  width: 250px; }\n"]}
+{
+    "version": 3,
+    "mappings": ";AAIA,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,IAAY;EACnB,MAAM,EAAE,IAAQ;EAChB,MAAM,EAAE,SAAW,CAAC,KAAK,CAAC,KAAoB;EAC9C,KAAK,EAAE,IAAI;EAGP,WAAI,EAAE,IAAU;EAChB,UAAG,EAAE,MAAU;CAEtB;;AAID,kIAAkI;AAClI,2GAA2G;AAEvG,AAAA,MAAM,CAAK;EACP,KAAK,EAAE,IAAY;CACtB;;AAFD,AAAA,MAAM,CAAK;EACP,KAAK,EAAE,KAAY;CACtB;;AAFD,AAAA,MAAM,CAAK;EACP,KAAK,EAAE,KAAY;CACtB;;AAFD,AAAA,MAAM,CAAK;EACP,KAAK,EAAE,KAAY;CACtB;;AAFD,AAAA,MAAM,CAAK;EACP,KAAK,EAAE,KAAY;CACtB",
+    "sources": [
+        "main.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

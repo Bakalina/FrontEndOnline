@@ -1,2 +1,47 @@
 header {
-  background-color: aqua; }
+  background-color: aqua;
+  color: red;
+}
+
+* {
+  margin: 0;
+  background-color: #c5c5c5;
+}
+
+body {
+  width: 1100px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header header' 'main aside' 'footer footer';
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  gap: 10px;
+}
+
+body .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+body .aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+body .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+body .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+/*# sourceMappingURL=main.css.map */
