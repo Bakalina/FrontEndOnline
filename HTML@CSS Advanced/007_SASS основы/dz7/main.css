@@ -1,6 +1,92 @@
-header {
-  background-color: aqua;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header h1 {
   color: red;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header nav {
+  margin-top: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.header nav a:hover {
+  color: #004080;
+  text-shadow: 0 5px 5px black;
+}
+
+.aside h2 {
+  font-size: 22px;
+  color: purple;
+  margin-bottom: 10px;
+}
+
+.aside .asideContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.aside .asideContainer .asideImg {
+  min-width: 50%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.aside .asideContainer a {
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.aside .asideContainer a:hover {
+  color: red;
+}
+
+article h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #804000;
+}
+
+article .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article .container .img {
+  min-width: 35%;
+  height: 250px;
+  overflow: hidden;
+}
+
+article .container p {
+  margin: 10px;
 }
 
 * {

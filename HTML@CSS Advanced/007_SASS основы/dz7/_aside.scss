@@ -1,0 +1,29 @@
+.aside {
+    h2 {
+        font-size: $size*2.2;
+        color: mix($colorRed, $colorBlue);
+        margin-bottom: $size;
+    }
+
+    .asideContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $size*3;
+
+        .asideImg {
+            min-width: 50%;
+            height: $size*10;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: $size*1.5;
+            margin-left: $size/2;
+
+            &:hover {
+                color: $colorRed;
+            }
+        }
+    }
+}

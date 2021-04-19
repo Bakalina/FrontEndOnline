@@ -1,0 +1,30 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        color: $colorRed;
+        font-size: $size*4;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    nav {
+        margin-top: 20px;
+
+        a {
+            text-decoration: none;
+            font-size: $size*2;
+            color: $colorRed;
+            text-transform: uppercase;
+            margin-right: 10px;
+
+            &:hover {
+                color: mix($colorGreen, $colorBlue);
+                text-shadow: 0 5px 5px black;
+            }
+        }
+    }
+}
