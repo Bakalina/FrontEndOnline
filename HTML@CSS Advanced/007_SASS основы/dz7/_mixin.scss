@@ -1,0 +1,13 @@
+@mixin width {
+    -webkit-max-width: 1100px;
+    -moz-max-width: 1100px;
+    -o-max-width: 1100px;
+    -ms-max-width: 1100px;
+    max-width: 1100px;
+
+    -webkit-margin: 0 auto;
+    -moz-margin: 0 auto;
+    -o-margin: 0 auto;
+    -ms-margin: 0 auto;
+    margin: 0 auto;
+}

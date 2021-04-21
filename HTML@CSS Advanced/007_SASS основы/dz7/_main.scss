@@ -1,23 +1,23 @@
-article {
-    h3 {
-        margin: $size 0;
-        font-size: $size*2;
-        color: mix($colorRed, $colorGreen);
-    }
+    article {
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-
-        .img {
-            min-width: 35%;
-            height: $size*25;
-            overflow: hidden;
+        h3 {
+            margin: $size 0;
+            font-size: $size*2;
+            color: mix($colorRed, $colorGreen);
         }
 
-        p {
-            margin: $size;
+        .container {
+            display: flex;
+            justify-content: space-between;
 
+            .img {
+                min-width: 35%;
+                height: $size*25;
+                overflow: hidden;
+            }
+
+            p {
+                margin: $size;
+            }
         }
     }
-}

@@ -4,11 +4,12 @@ $colorBlue: blue;
 $size: 10px;
 
 
-
+@import 'mixin';
 @import 'header';
 @import 'aside';
 @import 'main';
 @import 'footer';
+
 
 
 
@@ -20,8 +21,7 @@ html {
 
 
 body {
-    max-width: 1100px;
-    margin: 0 auto;
+    @include width;
     display: grid;
     grid-template-areas: 
     'header header'

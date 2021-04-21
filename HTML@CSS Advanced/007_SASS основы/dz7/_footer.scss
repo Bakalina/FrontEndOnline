@@ -1,15 +1,14 @@
 .footer {
-    width: 100%;
     height: $size * 5;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    a{
+
+    a {
         text-decoration: none;
         font-size: $size*1.5;
         padding: 0 $size*2;
         color: white;
-        
     }
 }
