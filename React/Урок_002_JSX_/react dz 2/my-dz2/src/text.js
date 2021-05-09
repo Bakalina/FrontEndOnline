@@ -1,11 +1,9 @@
 import React from "react";
 
 
-function  Text () {
+function Text(props) {
     return (
-        <div>
-            Hello world
-        </div>
+        <p>{props.text}</p>
     )
 }
 

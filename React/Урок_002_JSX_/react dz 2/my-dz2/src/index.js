@@ -4,10 +4,26 @@ import './index.css';
 import Text from './text';
 
 
+const User = {
+    name: 'Inna',
+    text: 'Произвольный текст'
+}
+
+
+function App() {
+    return (
+        <div>
+            <Text text={User.text}/>
+            <button>Click</button>
+        </div>
+    )
+}
+
+
 ReactDOM.render(
-    <Text />,
-document.getElementById('root')
-);
+    <App/>,
+    document.getElementById('root')
+)
 
 
 
