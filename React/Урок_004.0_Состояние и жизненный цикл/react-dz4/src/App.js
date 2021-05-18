@@ -1,50 +1,17 @@
 import React from "react";
 import './App.css';
-
-class Clock extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state= {date: new Date()};
-    }
-
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        )
-    }
-
-    componentDidUnmount() {
-    clearInterval(this.timerID)
-    }
-
-    tick() {
-        this.setState({
-            date: new Date()
-        })
-    }
-
-
-    render() {
-        return (
-            <h2>{this.state.date.toLocaleTimeString()}</h2>
-        )
-    }
-}
-
-
-
+import Clock from "./Component/Clock";
+import Button from "./Component/Button";
 
 
 function App() {
-  return (
-    <div className="App">
-      <h1>HelloWorld</h1>
-        <Clock/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Clock/>
+            <Button/>
+        </div>
+    );
 }
-
 
 
 export default App;
