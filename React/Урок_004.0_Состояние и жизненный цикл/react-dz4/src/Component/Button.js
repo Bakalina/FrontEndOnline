@@ -1,32 +1,29 @@
 import React from "react";
 
-const textOn = () => {
-    return (
-        <div>Hello</div>
-    )
-}
-
-const textOff = () => {
-    return (
-        <div></div>
-    )
-}
-
-
 
 class Button extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {text: true}
+        this.state = {text:''}
     }
 
+    textOn = () => {
+        return (
+            this.setState({text: 'Hello'})
+        )
+    }
 
+    textOff = () => {
+        return (
+            this.setState({text:''})
+        )
+    }
 
 
     render() {
         return (
             <div>
-                <button onClick={this.textSt}>Click</button>
+                <button onClick={this.textOn}>Click</button>
                 <div>{this.state.text}</div>
             </div>
         )
