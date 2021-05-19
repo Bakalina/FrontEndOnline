@@ -1,0 +1,35 @@
+.rateStyle {
+    color: white;
+    background: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+}
+
+
+
+.borderStyle {
+    font-weight: bold;
+    background: black;
+    border: 2px solid #6d6f6f;
+    border-radius: 50% ;
+    width: 36px;
+    height: 36px;
+    transform: translate(6%, 6%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.borderRateStyle {
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+
+}

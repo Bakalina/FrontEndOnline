@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './Rating.css'
 
-const Rating = ({ rate }) => {
+const Rating = ({rate}) => {
     return (
-        <div>
-            {rate}%
+        <div className='rateStyle'>
+            <div className='borderStyle'>
+                {rate}<sup style={{fontSize: '7px'}}>%</sup>
+                <div className='borderRateStyle'>
+                </div>
+            </div>
         </div>
     )
 }
