@@ -4,32 +4,71 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-
+    transform: translate(10px, -20px);
 }
 
-
-
-.borderStyle {
+.borderStyle25 {
     font-weight: bold;
-    background: black;
-    border: 2px solid #6d6f6f;
-    border-radius: 50% ;
-    width: 36px;
-    height: 36px;
-    transform: translate(6%, 6%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-}
-
-.borderRateStyle {
-    background: transparent;
-    border: 2px solid red;
+    background: #ff0000;
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    position: absolute;
+    transform: translate(6%, 6%);
+}
 
+.borderStyle50 {
+    font-weight: bold;
+    background: #fde800;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(6%, 6%);
+}
+
+.borderStyle75 {
+    font-weight: bold;
+    background: #60ff35;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(6%, 6%);
+}
+
+.lineaStyle25 {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(180deg, transparent 50%, #494949 50%), linear-gradient(90deg, #494949FF 50%, transparent 50%);
+}
+
+.lineaStyle50 {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(90deg, #494949FF 50%, transparent 50%);
+}
+
+.lineaStyle75 {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(180deg, transparent 50%, #60ff35 50%), linear-gradient(90deg, #494949FF 50%, transparent 50%);
+}
+
+.lineaStyle100 {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: none;
+}
+
+.borderRateStyle {
+    background: black;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(6%, 6%);
 }
