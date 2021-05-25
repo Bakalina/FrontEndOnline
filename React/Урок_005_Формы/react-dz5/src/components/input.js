@@ -41,7 +41,9 @@ class FormInput extends React.Component {
                     value={this.state.commentUser}
                     onChange={this.setCommentUser}>
                 </input>
-                <button style={{width:'50px', height:'20px'}}>send</button>
+                <div>
+                    <button style={{width: '50px', height: '20px'}}>send</button>
+                </div>
             </form>
         )
     }
