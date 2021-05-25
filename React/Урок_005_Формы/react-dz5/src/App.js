@@ -1,9 +1,11 @@
-import Form from "./components/input";
+import FormInput from "./components/InputOne/input";
+import Calc from "./components/InputTwo/InputTwo";
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      <FormInput/>
+        <Calc/>
     </div>
   );
 }
