@@ -1,0 +1,13 @@
+.form {
+    width: max-content;
+    margin: 0 auto;
+    border: 2px solid dodgerblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    input {
+        margin-bottom: 5px;
+    }
+}
+

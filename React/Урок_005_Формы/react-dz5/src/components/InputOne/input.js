@@ -1,11 +1,14 @@
 import React from "react";
 
-
-const TextInput = (props) => {
+const Users = (props) => {
     return (
-        <p>{props.text}</p>
+        <div>
+            <p>{props.text}</p>
+        </div>
     )
 }
+
+
 
 class FormInput extends React.Component {
     constructor(props) {
@@ -29,17 +32,15 @@ class FormInput extends React.Component {
     }
 
 
+    eventSubmit = (e) => {
+        e.preventDefault();
+    }
 
 
     render() {
-
-        const users = () => {
-            const user = JSON.stringify(this.state)
-        }
-
         return (
             <div>
-                <form>
+                <form onSubmit={this.eventSubmit}>
                     <input
                         value={this.state.lastName}
                         onChange={this.setLastName}>
@@ -52,11 +53,9 @@ class FormInput extends React.Component {
                         value={this.state.commentUser}
                         onChange={this.setCommentUser}>
                     </input>
-                    <div>
-                        <button style={{width: '50px', height: '20px'}} onClick={users}>send</button>
-                    </div>
+                    <button>send</button>
+                    <Users text={JSON.stringify(this.state)} />
                 </form>
-                <TextInput text={users}/>
             </div>
         )
     }
