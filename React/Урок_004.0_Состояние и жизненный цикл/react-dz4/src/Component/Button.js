@@ -5,19 +5,27 @@ import Text from "./Text";
 class Button extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {stateText: false}
-        this.state = {text: ''}
+        this.state = {
+            stateText: '',
+            text: ''
+        }
     }
 
 
     textOn = () => {
-        this.setState({stateText: true})
-        this.setState ({text: <Text/>})
+        this.setState({
+            stateText: true,
+            text: <Text/>
+        })
+
     }
 
     textOff = () => {
-        this.setState({stateText: false})
-        this.setState ({text: ''})
+        this.setState({
+            stateText: false,
+            text: ''
+        })
+
     }
 
 

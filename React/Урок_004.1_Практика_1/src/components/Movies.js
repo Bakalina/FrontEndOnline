@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, CardColumns } from 'react-bootstrap';
-import Rating from './Rating';
+import Rating from './Rating/Rating';
 
 export const Movies = ({ data }) => {
     const moviesList = data.map(movie => (

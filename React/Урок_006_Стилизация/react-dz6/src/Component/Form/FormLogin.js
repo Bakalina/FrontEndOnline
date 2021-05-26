@@ -7,9 +7,15 @@ class FormLogin extends React.Component {
         super(props);
     }
 
+    eventSubmit = (e) => {
+        e.preventDefault();
+
+    }
+
+
     render() {
         return (
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={this.eventSubmit}>
                 <input/>
                 <input/>
                 <button>Click Me</button>
