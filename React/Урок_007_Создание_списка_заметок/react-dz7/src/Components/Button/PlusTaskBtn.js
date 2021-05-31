@@ -1,11 +1,11 @@
 import React from "react";
-import './PlusTaskBtn.scss';
+import styles from './PlusTaskBtn.module.scss';
 
 
 class PlusTaskBtn extends React.Component {
     render() {
         return (
-            <button>Plus</button>
+            <button className={styles.btn}>Plus</button>
         )
     }
 }
