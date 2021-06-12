@@ -7,25 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-let schedule = {};
+<script>
 
-function isEmpty(schedule) {
-    for (let key in schedule) {
-        return false;
+
+    function checkAdult(age) {
+        if (!age) {
+            console.log('Error Please, enter your age')
+        } else if (age < 0) {
+            console.log('Error Please, enter positive number')
+        }  else if (typeof age !== 'number') {
+            console.log('Error Please, enter number')
+        } else if (!Number.isInteger(age)) {
+            console.log('Error Please, enter Integer number')
+        } else if (age < 18) {
+            console.log('Error Access denied - you are too young!')
+        } else {
+            console.log('Access allowed')
+        }
+        console.log('Age verification complete')
     }
-    return true;
-}
-
-alert( isEmpty(schedule) ); // true
-
-schedule["8:30"] = "get up";
-
-alert( isEmpty(schedule) ); // false
 
 
-
-
-    </script>
+    checkAdult(-58);
+</script>
 </body>
 </html>
