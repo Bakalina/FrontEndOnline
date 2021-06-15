@@ -10,25 +10,18 @@
 <script>
 
 
-    function checkAdult(age) {
-        if (!age) {
-            console.log('Error Please, enter your age')
-        } else if (age < 0) {
-            console.log('Error Please, enter positive number')
-        }  else if (typeof age !== 'number') {
-            console.log('Error Please, enter number')
-        } else if (!Number.isInteger(age)) {
-            console.log('Error Please, enter Integer number')
-        } else if (age < 18) {
-            console.log('Error Access denied - you are too young!')
-        } else {
-            console.log('Access allowed')
+    const filterNums = (array, numb, param) => {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > numb) {
+                result.push(array[i])
+            }
         }
-        console.log('Age verification complete')
-    }
+        return result ;
+    };
 
 
-    checkAdult(-58);
+    console.log(filterNums([-1, 2, 4, 0, 55, -12, 3], 11, 'greater'));
 </script>
 </body>
 </html>
