@@ -10,18 +10,11 @@
 <script>
 
 
-    const filterNums = (array, numb, param) => {
-        const result = [];
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] > numb) {
-                result.push(array[i])
-            }
-        }
-        return result ;
-    };
+    const sumOfLen = (...array) => {
+     return  array.map(i => i.length).reduce((sum, current) => sum + current, 0);
+    }
 
-
-    console.log(filterNums([-1, 2, 4, 0, 55, -12, 3], 11, 'greater'));
+    console.log(sumOfLen('hello', 'hi'));
 </script>
 </body>
 </html>
