@@ -10,11 +10,18 @@
 <script>
 
 
-    const sumOfLen = (...array) => {
-     return  array.map(i => i.length).reduce((sum, current) => sum + current, 0);
+    const howMuchSec = (seconds = 0, minutes = 0, hours = 0, days = 0, week = 0) => {
+        let sec = [];
+        sec.push(
+            seconds,
+            minutes * 60,
+            hours * 60 * 60,
+            days * 24 * 60 * 60,
+            week * 7 * 24 * 60 * 60)
+        return sec.reduce((sum, current) => sum + current, 0)
     }
 
-    console.log(sumOfLen('hello', 'hi'));
+    console.log(howMuchSec());
 </script>
 </body>
 </html>
