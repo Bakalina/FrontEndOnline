@@ -10,18 +10,17 @@
 <script>
 
 
-    const howMuchSec = (seconds = 0, minutes = 0, hours = 0, days = 0, week = 0) => {
-        let sec = [];
-        sec.push(
-            seconds,
-            minutes * 60,
-            hours * 60 * 60,
-            days * 24 * 60 * 60,
-            week * 7 * 24 * 60 * 60)
-        return sec.reduce((sum, current) => sum + current, 0)
-    }
+    const filterNums = (array, number=0, operator='greater') => {
+        const result = [];
+        array.forEach(function (item) {
+            if (operator === 'less'?item < number:item > number) {
+                result.push(item);
+            }
+        });
+        return result;
+    };
 
-    console.log(howMuchSec());
+    console.log(filterNums([-2, 2, 3, 0, 43, -13, 6]));
 </script>
 </body>
 </html>
