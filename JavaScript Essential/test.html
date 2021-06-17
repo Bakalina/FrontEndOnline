@@ -10,11 +10,22 @@
 <script>
 
 
-    function getMin(arr) {
-        return Math.min(...arr)
+    // const Checker = require('./Checker.js');
+
+    class Movie {
+        constructor(name, category, startShow) {
+            this.name = name;
+            this.category = category;
+            this.startShow = startShow;
+        }
+        watchMovie() {
+            return `I watch the movie ${this.name}!`;
+        }
     }
 
-    console.log(getMin([15, 25, 65 ,99, 666 ,65 ,66 ,54 ,9 ,98 ,987]))
+    let movie1 = new Movie('Titanic', 'drama', '1997 release');
+    let movie2 = new Movie('Troya', 'historical', '2004 release');
+    console.log(movie1.watchMovie());
 </script>
 </body>
 </html>
