@@ -23,7 +23,7 @@ export default class HomePage extends Component {
     }
 
     componentDidMount() {
-        this.getAllMovies(497);
+        this.getAllMovies(1);
     }
 
     handlePageChange(page) {
